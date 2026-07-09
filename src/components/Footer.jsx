@@ -1,0 +1,121 @@
+import { Link } from "react-router-dom";
+import logo from "../assets/Logo.svg";
+import facebook from "../assets/Facebook.svg";
+import twitter from "../assets/Twitter.svg";
+import linkedin from "../assets/Linkedin.svg";
+import instagram from "../assets/Instagram.svg";
+
+const COLUMNS = [
+  {
+    heading: "About",
+    links: [
+      { label: "About Us", to: "/about" },
+      { label: "Masthead", to: "/masthead" },
+      { label: "Careers", to: "/careers" },
+      { label: "Blog", to: "/blog" },
+      { label: "Investor Relations", to: "/investor-relations" },
+    ],
+  },
+  {
+    heading: "Contact",
+    links: [
+      { label: "Contact Us", to: "/contact" },
+      { label: "Accessibility", to: "/accessibility" },
+      { label: "Advertise", to: "/advertise" },
+      { label: "Media Kit", to: "/media-kit" },
+      { label: "Sitemap", to: "/sitemap" },
+      { label: "System status", to: "/status" },
+    ],
+  },
+  {
+    heading: "News",
+    links: [
+      { label: "Markets", to: "/category/markets" },
+      { label: "Finance", to: "/category/finance" },
+      { label: "Tech", to: "/category/tech" },
+      { label: "Policy", to: "/category/policy" },
+      { label: "Focus", to: "/category/focus" },
+    ],
+  },
+  {
+    heading: "Sponsored",
+    links: [
+      { label: "Bitcoin Treasuries Theme Week", to: "/tag/bitcoin-treasuries" },
+      { label: "Thought Leadership", to: "/tag/thought-leadership" },
+      { label: "Press Release", to: "/category/press-release" },
+      { label: "MEXC", to: "/tag/mexc" },
+      { label: "Phemex", to: "/tag/phemex" },
+      { label: "Stellar", to: "/tag/stellar" },
+    ],
+  },
+];
+
+const SOCIALS = [
+  { icon: facebook, label: "Facebook", href: "https://facebook.com" },
+  { icon: twitter, label: "X (Twitter)", href: "https://x.com" },
+  { icon: linkedin, label: "LinkedIn", href: "https://linkedin.com" },
+  { icon: instagram, label: "Instagram", href: "https://instagram.com" },
+];
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-surface-border bg-surface font-['Plus_Jakarta_Sans']">
+      <div className="mx-auto max-w-content px-4 py-9">
+        <Link to="/" className="inline-block" aria-label="The Bit Gazette home">
+          <img src={logo} alt="The Bit Gazette" className="h-[78px] w-auto" />
+        </Link>
+
+        <div className="mt-9 grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4 w-[94%]">
+          {COLUMNS.map((col) => (
+            <div key={col.heading}>
+              <h3 className="mb-4 text-[14px] font-semibold text-ink">
+                {col.heading}
+              </h3>
+              <ul className="space-y-2">
+                {col.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      to={link.to}
+                      className="text-sm text-ink-soft transition-colors hover:text-brand"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 flex flex-col-reverse items-center justify-between gap-4 border-t border-surface-border pt-7 sm:flex-row">
+          <div className="flex flex-wrap items-center gap-5 text-xs text-ink-muted tracking-[0.02px]">
+            <span>Copyright © 2025 The Bit Gazette.</span>
+            <Link to="/ethics" className="hover:text-brand">
+              Ethics
+            </Link>
+            <Link to="/privacy" className="hover:text-brand">
+              Privacy
+            </Link>
+            <Link to="/terms" className="hover:text-brand">
+              Terms of Use
+            </Link>
+          </div>
+          <div className="flex items-center gap-4">
+            {SOCIALS.map(({ icon, label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="flex h-6 w-6 items-center justify-center rounded-full transition-colors hover:bg-surface-alt"
+              >
+                <img src={icon} alt={label} className="h-5 w-5" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
