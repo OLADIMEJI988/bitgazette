@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Search, Globe, Menu, X } from "lucide-react";
 import logo from "../assets/Logo.svg";
 import search from "../assets/search.svg";
@@ -18,6 +18,8 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   return (
     <header className="font-['Plus_Jakarta_Sans'] sticky top-0 z-50 border-b border-surface-border bg-surface backdrop-blur">
@@ -92,9 +94,16 @@ export default function Navbar() {
             className="mx-auto flex max-w-content items-center gap-2"
             onSubmit={(e) => {
               e.preventDefault();
-              const q = new FormData(e.currentTarget).get("q");
-              if (q)
-                window.location.assign(`/search?q=${encodeURIComponent(q)}`);
+
+              const q = new FormData(e.currentTarget)
+                .get("q")
+                ?.toString()
+                .trim();
+
+              if (!q) return;
+
+              navigate(`/search?q=${encodeURIComponent(q)}`);
+              setSearchOpen(false);
             }}
           >
             <input
