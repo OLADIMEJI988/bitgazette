@@ -21,8 +21,8 @@ export default function CategorySection({ title, slug, isLast }) {
       <SectionHeader title={title} to={`/category/${slug}`} />
       {loading && (
         <div
-          className={`space-y-6 pr-5 ${
-            !isLast ? "border-r border-surface-border" : ""
+          className={`space-y-6 lg:pr-5 ${
+            !isLast ? "lg:border-r lg:border-surface-border" : ""
           }`}
         >
           {Array.from({ length: 3 }).map((_, i) => (
@@ -38,8 +38,8 @@ export default function CategorySection({ title, slug, isLast }) {
       )}
       {!loading && !error && posts?.length > 0 && (
         <div
-          className={`space-y-6 pr-5 ${
-            !isLast ? "border-r border-surface-border" : ""
+          className={`space-y-6 lg:pr-5 ${
+            !isLast ? "lg:border-r lg:border-surface-border" : ""
           }`}
         >
           {posts.map((post) => (

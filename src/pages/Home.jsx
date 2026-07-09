@@ -32,13 +32,13 @@ export default function Home() {
   const finance = useFetch(() => getFinancePosts({ perPage: 3 }), []);
 
   return (
-    <div className="mx-auto max-w-content px-6 py-6">
+    <div className="mx-auto max-w-content px-4 lg:px-6 py-6">
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-[280px_1fr_300px]">
-        <div className="order-2 flex lg:order-1">
+        <div className="order-2 flex lg:order-1 mb-5 lg:mb-0">
           <LeftSidebar />
         </div>
 
-        <div className="order-1 space-y-[56px] lg:order-2 border border-surface-border rounded-[8px] p-5">
+        <div className="order-1 space-y-[56px] lg:order-2 border border-surface-border rounded-[8px] p-5 mb-5 lg:mb-0">
           <section aria-label="Featured story">
             <h2 className="mb-5 text-[16px] font-['Plus_Jakarta_Sans'] font-medium tracking-[0.04px] text-ink">
               Featured Story
@@ -93,8 +93,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex my-14 gap-4 w-full">
-        <div className="grid flex-1 w-full grid-cols-1 gap-5 rounded-[8px] border border-surface-border pt-[22px] pb-3 pl-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="my-14 flex w-full flex-col gap-8 lg:flex-row lg:gap-4">
+        <div className="grid gap-10 flex-1 grid-cols-1 lg:gap-5 rounded-[8px] border border-surface-border px-5 pt-[22px] pb-3 sm:grid-cols-2 lg:grid-cols-3">
           {LOWER_SECTIONS.map((section, index) => (
             <CategorySection
               key={section.slug}
@@ -105,7 +105,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="min-w-[300px] max-w-[300px]">
+        <div className="w-full lg:min-w-[300px] lg:max-w-[300px]">
           <SidebarWidget
             title="Finance"
             to="/category/finance"

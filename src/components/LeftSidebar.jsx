@@ -31,7 +31,10 @@ export default function LeftSidebar() {
   } = useFetch(() => getTrendingPosts({ perPage: 3 }), []);
 
   return (
-    <aside className="flex h-full w-full flex-col space-y-6" aria-label="Sidebar">
+    <aside
+      className="flex h-full w-full flex-col space-y-6"
+      aria-label="Sidebar"
+    >
       <section className="rounded-[8px] border border-surface-border bg-surface p-5">
         <div
           className="mb-4 flex gap-1 border-b border-surface-border"
@@ -67,11 +70,13 @@ export default function LeftSidebar() {
           )}
           {!loading &&
             !error &&
-            posts?.map((post) => <SmallNewsCard key={post.id} post={post} />)}
+            (Array.isArray(posts) ? posts : []).map((post) => (
+              <SmallNewsCard key={post.id} post={post} />
+            ))}
         </div>
       </section>
 
-      <div className="sticky top-20 max-h-[calc(100vh-1px)] overflow-hidden">
+      <div className="lg:sticky lg:top-20 lg:max-h-[calc(100vh-1px)] lg:overflow-hidden">
         <SidebarWidget
           title="Trending"
           to="/category/trending-stories"

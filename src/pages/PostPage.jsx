@@ -1,5 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
+import { FaFacebookF, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { getPostBySlug } from "../services/posts";
 import Tag from "../components/ui/Tag";
 import { FeaturedStorySkeleton } from "../components/ui/Loaders";
@@ -39,8 +41,19 @@ export default function PostPage() {
     );
   }
 
+  const shareUrl = encodeURIComponent(window.location.href);
+  const shareTitle = encodeURIComponent(post.title);
+
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+
+  const twitterShareUrl = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`;
+
+  const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+
+  const pinterestShareUrl = `https://pinterest.com/pin/create/button/?url=${shareUrl}&description=${shareTitle}&media=${encodeURIComponent(post.image)}`;
+
   return (
-    <article className="mx-auto max-w-3xl px-4 py-8">
+    <article className="mx-auto max-w-3xl px-4 py-8 font-['Plus_Jakarta_Sans']">
       <div className="mb-4 flex flex-wrap gap-2">
         {post.breaking && <Tag variant="breaking">Breaking News</Tag>}
         {post.categories.map((cat) => (
@@ -50,7 +63,7 @@ export default function PostPage() {
         ))}
       </div>
 
-      <h1 className="font-display text-2xl font-extrabold leading-tight text-ink sm:text-3xl">
+      <h1 className="text-2xl font-bold leading-tight text-ink sm:text-3xl">
         {post.title}
       </h1>
 
@@ -89,11 +102,52 @@ export default function PostPage() {
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 
+      <div className="mt-8 flex flex-wrap items-center gap-3">
+        <a
+          href={facebookShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 rounded-[10px] bg-[#1877F2] px-4 py-2 text-white transition-colors hover:opacity-90"
+        >
+          <FaFacebookF />
+          Share on Facebook
+        </a>
+
+        <a
+          href={twitterShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 rounded-[10px] bg-black px-4 py-2 text-white transition-colors hover:opacity-90"
+        >
+          <FaXTwitter /> Share on Twitter
+        </a>
+
+        <a
+          href={linkedInShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 rounded-[10px] bg-[#0A66C2] px-4 py-2 text-white transition-colors hover:opacity-90"
+        >
+          <FaLinkedinIn />
+          Share on LinkedIn
+        </a>
+
+        <a
+          href={pinterestShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 rounded-[10px] bg-[#E60023] px-4 py-2 text-white transition-colors hover:opacity-90"
+        >
+          <FaPinterestP />
+          Share on Pinterest
+        </a>
+      </div>
+
       {post.tags.length > 0 && (
         <div className="mt-10 flex flex-wrap gap-2 border-t border-surface-border pt-6">
           {post.tags.map((tag) => (
             <Link key={tag.id} to={`/tag/${tag.slug}`}>
-              <Tag>#{tag.name}</Tag>
+              <Tag>{tag.name}</Tag>
             </Link>
           ))}
         </div>

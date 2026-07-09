@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Search, Globe, Menu, X } from "lucide-react";
 import logo from "../assets/Logo.svg";
@@ -21,11 +21,20 @@ export default function Navbar() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
+
   return (
-    <header className="font-['Plus_Jakarta_Sans'] sticky top-0 z-50 border-b border-surface-border bg-surface backdrop-blur">
-      <div className="mx-auto flex h-[72px] max-w-content items-center justify-between gap-4 px-6">
+    <header className="font-['Plus_Jakarta_Sans'] sticky top-0 z-50 border-b border-surface-border bg-white">
+      <div className="mx-auto flex h-[72px] max-w-content items-center justify-between gap-4 px-3 lg:px-6">
         <Link
           to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex shrink-0 items-center"
           aria-label="The Bit Gazette home"
         >
@@ -56,10 +65,16 @@ export default function Navbar() {
             type="button"
             onClick={() => setSearchOpen((o) => !o)}
             className="flex h-10 w-10 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-surface-alt"
-            aria-label="Search"
+            aria-label={searchOpen ? "Close search" : "Open search"}
             aria-expanded={searchOpen}
           >
-            <img src={search} alt="Search" className="h-5 w-5" />
+            <span className="transition-transform duration-200">
+              {searchOpen ? (
+                <X size={20} />
+              ) : (
+                <img src={search} alt="Search" className="h-5 w-5" />
+              )}
+            </span>
           </button>
           <button
             type="button"
@@ -124,39 +139,62 @@ export default function Navbar() {
       )}
 
       {menuOpen && (
-        <nav
-          className="border-t border-surface-border bg-surface px-4 py-4 lg:hidden"
-          aria-label="Mobile"
-        >
-          <ul className="flex flex-col gap-1">
-            {NAV_LINKS.map((link) => (
-              <li key={link.to}>
-                <NavLink
-                  to={link.to}
-                  onClick={() => setMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `block rounded px-3 py-2.5 text-sm font-semibold ${
-                      isActive
-                        ? "bg-brand-light text-brand"
-                        : "text-ink hover:bg-surface-alt"
-                    }`
-                  }
-                >
-                  {link.label}
-                </NavLink>
-              </li>
-            ))}
-            <li>
+        <>
+          <div
+            onClick={() => setMenuOpen(false)}
+            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
+          />
+
+          <nav className="fixed inset-0 z-50 bg-white" aria-label="Mobile">
+            {/* Header */}
+            <div className="flex h-[72px] items-center justify-between border-b border-surface-border px-3">
+              <img
+                src={logo}
+                alt="The Bit Gazette"
+                className="h-[71px] w-auto"
+              />
+
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="rounded-full p-2 hover:bg-surface-alt transition-colors"
+                aria-label="Close menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            {/* Navigation */}
+            <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto px-6 py-8">
+              <ul className="space-y-2">
+                {NAV_LINKS.map((link) => (
+                  <li key={link.to}>
+                    <NavLink
+                      to={link.to}
+                      onClick={() => setMenuOpen(false)}
+                      className={({ isActive }) =>
+                        `block rounded-xl px-4 py-4 text-lg font-medium transition-colors ${
+                          isActive
+                            ? "bg-brand-light text-brand"
+                            : "text-ink hover:bg-surface-alt"
+                        }`
+                      }
+                    >
+                      {link.label}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+
               <Link
                 to="/login"
                 onClick={() => setMenuOpen(false)}
-                className="block rounded bg-[#A6A6A6]/15 px-4 py-3 text-center text-[14px] font-semibold text-white"
+                className="mt-8 block rounded-xl bg-brand px-4 py-4 text-center text-lg font-semibold text-white"
               >
                 Login
               </Link>
-            </li>
-          </ul>
-        </nav>
+            </div>
+          </nav>
+        </>
       )}
     </header>
   );

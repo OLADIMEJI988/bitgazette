@@ -1,19 +1,20 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
+import { lazy, Suspense } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import Layout from "./components/Layout";
 
-const Home = lazy(() => import('./pages/Home'));
-const News = lazy(() => import('./pages/News'));
-const CategoryPage = lazy(() => import('./pages/CategoryPage'));
-const PostPage = lazy(() => import('./pages/PostPage'));
-const SearchPage = lazy(() => import('./pages/SearchPage'));
-const TagPage = lazy(() => import('./pages/TagPage'));
-const AuthorPage = lazy(() => import('./pages/AuthorPage'));
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Privacy = lazy(() => import('./pages/Privacy'));
-const Login = lazy(() => import('./pages/Login'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+const Home = lazy(() => import("./pages/Home"));
+const News = lazy(() => import("./pages/News"));
+const CategoryPage = lazy(() => import("./pages/CategoryPage"));
+const PostPage = lazy(() => import("./pages/PostPage"));
+const SearchPage = lazy(() => import("./pages/SearchPage"));
+const TagPage = lazy(() => import("./pages/TagPage"));
+const AuthorPage = lazy(() => import("./pages/AuthorPage"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Login = lazy(() => import("./pages/Login"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function PageFallback() {
   return (
@@ -30,6 +31,7 @@ function PageFallback() {
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Suspense fallback={<PageFallback />}>
         <Routes>
           <Route element={<Layout />}>

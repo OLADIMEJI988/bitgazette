@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 const VARIANTS = {
-  category: "bg-brand text-white",
+  category: "bg-[#A6A6A6]/15 hover:bg-brand hover:text-white text-ink transition-all duration-300 ease-in-out",
   breaking: "bg-brand text-white",
   sponsored: "bg-brand text-white",
   tech: "bg-brand text-white",

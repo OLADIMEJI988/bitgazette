@@ -51,10 +51,10 @@ const COLUMNS = [
 ];
 
 const SOCIALS = [
-  { icon: facebook, label: "Facebook", href: "https://facebook.com" },
-  { icon: twitter, label: "X (Twitter)", href: "https://x.com" },
-  { icon: linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: instagram, label: "Instagram", href: "https://instagram.com" },
+  { icon: facebook, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61576706251527&rdid=PB2BA79RdOQz6bMT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CDuikr157%2F#" },
+  { icon: twitter, label: "X (Twitter)", href: "https://x.com/thebitgazette" },
+  { icon: linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/the-bit-gazette/?viewAsMember=true" },
+  { icon: instagram, label: "Instagram", href: "https://www.instagram.com/thebitgazette" },
 ];
 
 export default function Footer() {
@@ -65,9 +65,9 @@ export default function Footer() {
           <img src={logo} alt="The Bit Gazette" className="h-[78px] w-auto" />
         </Link>
 
-        <div className="mt-9 grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4 w-[94%]">
+        <div className="mt-9 grid grid-cols-2 gap-8 w-full mx-3 lg:mx-0 sm:grid-cols-2 lg:grid-cols-4 lg:w-[94%]">
           {COLUMNS.map((col) => (
-            <div key={col.heading}>
+            <div key={col.heading} className="w-full">
               <h3 className="mb-4 text-[14px] font-semibold text-ink">
                 {col.heading}
               </h3>
