@@ -13,7 +13,7 @@ export default function RightSidebar() {
   const tech = useFetch(() => getTechPosts({ perPage: 3 }), []);
 
   return (
-    <aside className="space-y-6 h-full" aria-label="Sidebar">
+    <aside className="space-y-8 lg:space-y-6 h-full" aria-label="Sidebar">
       <SidebarWidget
         title="Expert Analysis"
         to="/category/expert-analysis"

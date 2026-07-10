@@ -35,7 +35,7 @@ export default function LeftSidebar() {
       className="flex h-full w-full flex-col space-y-6"
       aria-label="Sidebar"
     >
-      <section className="rounded-[8px] border border-surface-border bg-surface py-5 px-4 lg:px-5">
+      <section className="rounded-[8px] lg:border lg:border-surface-border bg-surface mt-5 lg:mt-0 lg:py-5 lg:px-5">
         <div
           className="mb-4 flex gap-1 border-b border-surface-border"
           role="tablist"
@@ -47,7 +47,7 @@ export default function LeftSidebar() {
               type="button"
               aria-selected={activeTab === tab}
               onClick={() => setActiveTab(tab)}
-              className={`-mb-px rounded-t border-b-2 px-3 py-2 text-sm font-semibold font-['Plus_Jakarta_Sans'] transition-colors ${
+              className={`-mb-px rounded-t border-b-2 px-3 py-2 lg:text-sm font-semibold font-['Plus_Jakarta_Sans'] transition-colors ${
                 activeTab === tab
                   ? "border-brand text-brand"
                   : "border-transparent text-ink-muted hover:text-ink"
