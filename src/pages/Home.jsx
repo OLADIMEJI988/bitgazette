@@ -26,7 +26,7 @@ const LOWER_SECTIONS = [
 
 export default function Home() {
   const featured = useFetch(() => getFeaturedPosts({ perPage: 1 }), []);
-  const latest = useFetch(() => getLatestPosts({ perPage: 8 }), []);
+  const latest = useFetch(() => getLatestPosts({ perPage: 9 }), []);
   const expert = useFetch(() => getExpertAnalysis({ perPage: 3 }), []);
   const sponsored = useFetch(() => getSponsoredPosts({ perPage: 2 }), []);
   const finance = useFetch(() => getFinancePosts({ perPage: 3 }), []);
@@ -38,7 +38,7 @@ export default function Home() {
           <LeftSidebar />
         </div>
 
-        <div className="order-1 space-y-[56px] lg:order-2 border border-surface-border rounded-[8px] p-5 mb-5 lg:mb-0">
+        <div className="order-1 space-y-[56px] lg:order-2 border border-surface-border rounded-[8px] py-5 px-4 lg:px-5 mb-5 lg:mb-0">
           <section aria-label="Featured story">
             <h2 className="mb-5 text-[16px] font-['Plus_Jakarta_Sans'] font-medium tracking-[0.04px] text-ink">
               Featured Story

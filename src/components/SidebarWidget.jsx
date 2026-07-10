@@ -14,7 +14,7 @@ export default function SidebarWidget({
 }) {
   return (
     <section
-      className={`rounded-[8px] border border-surface-border bg-surface p-5 ${className}`}
+      className={`rounded-[8px] border border-surface-border bg-surface py-5 px-4 lg:px-5 ${className}`}
       aria-label={title}
     >
       <SectionHeader title={title} to={to} />

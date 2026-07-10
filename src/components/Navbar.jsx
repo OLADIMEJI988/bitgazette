@@ -31,7 +31,7 @@ export default function Navbar() {
 
   return (
     <header className="font-['Plus_Jakarta_Sans'] sticky top-0 z-50 border-b border-surface-border bg-white">
-      <div className="mx-auto flex h-[72px] max-w-content items-center justify-between gap-4 px-3 lg:px-6">
+      <div className="mx-auto flex h-[72px] max-w-content items-center justify-between gap-4 px-4 lg:px-6">
         <Link
           to="/"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -164,7 +164,7 @@ export default function Navbar() {
             </div>
 
             {/* Navigation */}
-            <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto px-6 py-8">
+            <div className="flex h-[calc(100vh-86px)] flex-col justify-between p-6">
               <ul className="space-y-2">
                 {NAV_LINKS.map((link) => (
                   <li key={link.to}>
@@ -172,7 +172,7 @@ export default function Navbar() {
                       to={link.to}
                       onClick={() => setMenuOpen(false)}
                       className={({ isActive }) =>
-                        `block rounded-xl px-4 py-4 text-lg font-medium transition-colors ${
+                        `block rounded-xl px-4 py-4 text-[16px] font-medium transition-colors ${
                           isActive
                             ? "bg-brand-light text-brand"
                             : "text-ink hover:bg-surface-alt"
@@ -188,7 +188,7 @@ export default function Navbar() {
               <Link
                 to="/login"
                 onClick={() => setMenuOpen(false)}
-                className="mt-8 block rounded-xl bg-brand px-4 py-4 text-center text-lg font-semibold text-white"
+                className="mt-8 block rounded-xl bg-brand px-4 py-4 text-center text-[16px] font-semibold text-white"
               >
                 Login
               </Link>

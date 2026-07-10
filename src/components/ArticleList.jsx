@@ -1,8 +1,14 @@
-import NewsCard from './NewsCard';
-import { NewsCardSkeleton } from './ui/Loaders';
-import { EmptyState, ErrorState } from './ui/StateMessage';
+import NewsCard from "./NewsCard";
+import { NewsCardSkeleton } from "./ui/Loaders";
+import { EmptyState, ErrorState } from "./ui/StateMessage";
 
-export default function ArticleList({ posts, loading, error, onRetry, skeletonCount = 6 }) {
+export default function ArticleList({
+  posts,
+  loading,
+  error,
+  onRetry,
+  skeletonCount = 6,
+}) {
   if (loading) {
     return (
       <div className="divide-y divide-surface-border">
@@ -15,12 +21,16 @@ export default function ArticleList({ posts, loading, error, onRetry, skeletonCo
     );
   }
 
-  if (error) return <ErrorState message="Couldn't load these stories." onRetry={onRetry} />;
-  if (!posts || posts.length === 0) return <EmptyState message="No stories to show yet." />;
+  if (error)
+    return (
+      <ErrorState message="Couldn't load these stories." onRetry={onRetry} />
+    );
+  if (!posts || posts.length === 0)
+    return <EmptyState message="No stories to show yet." />;
 
   return (
     <div>
-      {posts.map((post) => (
+      {posts.slice(1).map((post) => (
         <NewsCard key={post.id} post={post} />
       ))}
     </div>

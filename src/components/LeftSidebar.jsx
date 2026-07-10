@@ -35,7 +35,7 @@ export default function LeftSidebar() {
       className="flex h-full w-full flex-col space-y-6"
       aria-label="Sidebar"
     >
-      <section className="rounded-[8px] border border-surface-border bg-surface p-5">
+      <section className="rounded-[8px] border border-surface-border bg-surface py-5 px-4 lg:px-5">
         <div
           className="mb-4 flex gap-1 border-b border-surface-border"
           role="tablist"
@@ -58,7 +58,7 @@ export default function LeftSidebar() {
           ))}
         </div>
 
-        <div className="thin-scroll space-y-5 overflow-y-auto pr-1">
+        <div className="thin-scroll space-y-5 overflow-y-auto lg:pr-1">
           {loading && (
             <ListSkeleton count={3} Component={SmallNewsCardSkeleton} />
           )}
