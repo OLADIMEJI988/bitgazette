@@ -35,7 +35,7 @@ export default function LeftSidebar() {
       className="flex h-full w-full flex-col space-y-6"
       aria-label="Sidebar"
     >
-      <section className="rounded-[8px] lg:border lg:border-surface-border bg-surface mt-5 lg:mt-0 lg:py-5 lg:px-5">
+      <section className="rounded-[8px] lg:border lg:border-surface-border lg:bg-surface mt-5 lg:mt-0 lg:py-5 lg:px-5">
         <div
           className="mb-4 flex gap-1 border-b border-surface-border"
           role="tablist"
