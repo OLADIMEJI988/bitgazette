@@ -11,7 +11,10 @@ const SearchPage = lazy(() => import("./pages/SearchPage"));
 const TagPage = lazy(() => import("./pages/TagPage"));
 const AuthorPage = lazy(() => import("./pages/AuthorPage"));
 const About = lazy(() => import("./pages/About"));
+const MastHead = lazy(() => import("./pages/MastHead"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Accessibility = lazy(() => import("./pages/Accessibility"));
+const Ethics = lazy(() => import("./pages/Ethics"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Login = lazy(() => import("./pages/Login"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -43,7 +46,10 @@ export default function App() {
             <Route path="/tag/:slug" element={<TagPage />} />
             <Route path="/author/:slug" element={<AuthorPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/masthead" element={<MastHead />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/ethics" element={<Ethics />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<NotFound />} />

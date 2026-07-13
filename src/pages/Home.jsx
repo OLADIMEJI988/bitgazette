@@ -38,7 +38,7 @@ export default function Home() {
           <LeftSidebar />
         </div>
 
-        <div className="order-1 space-y-[56px] lg:order-2 lg:border lg:border-surface-border rounded-[8px] mt-2 lg:mt-0 lg:px-5 mb-5 lg:mb-0">
+        <div className="order-1 space-y-[56px] lg:order-2 lg:border lg:border-surface-border rounded-[8px] mt-2 lg:mt-0 lg:px-5 lg:py-5 mb-5 lg:mb-0">
           <section aria-label="Featured story">
             <h2 className="lg:mb-5 mb-6 text-lg lg:text-[16px] font-['Plus_Jakarta_Sans'] font-medium tracking-[0.04px] text-ink">
               Featured Story

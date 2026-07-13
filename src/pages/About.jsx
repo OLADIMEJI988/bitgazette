@@ -3,50 +3,54 @@ import { ArrowRight, Check } from "lucide-react";
 
 const principles = [
   {
-    title: "Accuracy",
-    text: "Every article is fact-checked and reviewed before publication to ensure the information we publish is accurate, well-sourced, and presented with the appropriate context. When errors occur, we acknowledge and correct them promptly and transparently.",
+    title: "Verified Reporting",
+    text: "Our reporting is built on named sources, verified information, and carefully attributed quotes whenever possible. Accuracy comes before speed.",
   },
   {
-    title: "Independence",
-    text: "Our editorial decisions are made independently and are never influenced by advertisers, sponsors, or outside interests. We maintain a clear separation between our newsroom and commercial partnerships to preserve the integrity of our reporting.",
+    title: "Editorial Independence",
+    text: "Commercial relationships never influence our newsroom. Editorial decisions are made independently and without outside interference.",
   },
   {
-    title: "Clarity",
-    text: "We explain complex topics in a way that's accessible to newcomers while remaining valuable to experienced readers. Our goal is to break down technical concepts, market developments, and regulatory changes into reporting that is clear, informative, and easy to understand.",
+    title: "Responsible Headlines",
+    text: "We hold our headlines to the same standard as our reporting. They should inform readers accurately—not exaggerate or mislead them.",
   },
   {
-    title: "Integrity",
-    text: "Our reporting is guided by fairness, accountability, and a commitment to trustworthy journalism. We strive to present balanced perspectives, provide meaningful context, and uphold the highest editorial standards in everything we publish.",
+    title: "Transparency",
+    text: "When mistakes happen, we correct them openly. We believe accountability strengthens trust and improves our journalism.",
   },
 ];
 
 const coverage = [
-  "Bitcoin & Cryptocurrency Markets",
-  "Blockchain Technology",
-  "Web3 & Decentralized Applications",
-  "DeFi & Digital Assets",
-  "Global Regulation & Policy",
-  "Fintech & Startups",
-  "Cybersecurity & Industry Incidents",
-  "Expert Analysis & Market Insights",
+  "Cryptocurrency Markets",
+  "Blockchain & Web3",
+  "Artificial Intelligence",
+  "Global Finance",
+  "Fintech & Digital Payments",
+  "Regulation & Public Policy",
+  "Startups & Innovation",
+  "Industry Analysis & Commentary",
+  "Venture Capital & Funding",
+  "Exchanges & Trading Platforms",
+  "Digital Asset Security",
+  "Enterprise Technology & Innovation",
 ];
 
 const stats = [
   {
+    value: "Dubai",
+    label: "Global Headquarters",
+  },
+  {
+    value: "Nigeria",
+    label: "Editorial Team",
+  },
+  {
     value: "24/7",
-    label: "Market Coverage",
+    label: "Global Coverage",
   },
   {
     value: "Global",
-    label: "Industry Perspective",
-  },
-  {
-    value: "Daily",
-    label: "News & Analysis",
-  },
-  {
-    value: "100%",
-    label: "Editorial Independence",
+    label: "Reader Focus",
   },
 ];
 
@@ -57,25 +61,21 @@ export default function About() {
       <section>
         <div className="mx-auto flex flex-col gap-12 px-4 py-16 sm:px-6 lg:justify-between">
           <div>
-            {/* <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-              About The Bit Gazette
-            </span> */}
-
             <h1 className="mt-6 text-4xl font-semibold leading-tight text-ink sm:text-5xl lg:text-6xl">
-              Independent journalism for the digital asset economy.
+              Global stories. Nigerian talent.
             </h1>
           </div>
 
           <div>
             <p className="text-base text-ink-soft sm:text-lg tracking-wide">
-              The Bit Gazette delivers trusted reporting on cryptocurrency,
-              blockchain technology, Web3, regulation, and the businesses
-              shaping the future of finance. Our goal is simple, provide
-              accurate, balanced, and timely journalism that helps readers
-              navigate one of the world's fastest-moving industries. Whether
-              you're following market movements, exploring emerging
-              technologies, or keeping up with global policy changes, we strive
-              to deliver reporting that is insightful, reliable, and accessible.
+              The Bit Gazette is a Dubai-based publication covering
+              cryptocurrency, blockchain, finance, and artificial intelligence
+              for a global audience. While our headquarters place us at the
+              heart of one of the world's fastest-moving financial and Web3
+              ecosystems, our newsroom is proudly Nigeria-first—bringing
+              together talented reporters, writers, and editors committed to
+              producing journalism that is accurate, timely, and globally
+              relevant.
             </p>
           </div>
         </div>
@@ -91,21 +91,24 @@ export default function About() {
             </span>
 
             <h2 className="mt-4 text-3xl font-semibold text-ink">
-              Helping people understand the future of finance.
+              A global newsroom built on local talent.
             </h2>
 
             <p className="mt-6 leading-8 text-ink-soft">
-              We believe reliable journalism is essential in an industry where
-              innovation moves quickly and misinformation spreads even faster.
-              Every story we publish is designed to help readers make informed
-              decisions through context, accuracy, and thoughtful reporting.
+              The Bit Gazette was founded on a simple belief: great journalism
+              isn't defined by geography. Some of the world's most insightful
+              reporting can come from newsrooms that have historically been
+              overlooked. Our structure combines a Dubai headquarters with a
+              Nigeria-first editorial team, allowing us to connect world-class
+              reporting talent with one of the most important financial and
+              blockchain hubs in the world.
             </p>
 
             <p className="mt-6 leading-8 text-ink-soft">
-              Whether you're a seasoned investor, developer, policymaker, or
-              someone discovering digital assets for the first time, we aim to
-              make blockchain and crypto more accessible without sacrificing
-              depth or credibility.
+              By combining local expertise with a global perspective, we're
+              building a publication that delivers credible reporting for
+              readers everywhere while creating opportunities for journalists
+              whose work deserves an international audience.
             </p>
           </div>
 
@@ -116,7 +119,7 @@ export default function About() {
             </span>
 
             <h2 className="mt-4 text-3xl font-semibold text-ink">
-              Reporting across the digital asset ecosystem.
+              Reporting on the industries shaping tomorrow.
             </h2>
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2">
@@ -162,13 +165,13 @@ export default function About() {
           </span>
 
           <h2 className="mt-4 text-3xl font-semibold text-ink sm:text-4xl">
-            Journalism built on trust.
+            Every story earns our readers' trust.
           </h2>
 
           <p className="mt-5 leading-8 text-ink-soft">
-            Every article published by The Bit Gazette follows the same
-            editorial standards. We strive to produce reporting that is fair,
-            transparent, and valuable to our readers.
+            Accuracy isn't just a goal—it's the foundation of our newsroom.
+            Every article follows clear editorial standards designed to ensure
+            our reporting is factual, transparent, and accountable.
           </p>
         </div>
 
@@ -192,26 +195,26 @@ export default function About() {
       <section className="bg-surface-secondary">
         <div className="mx-auto flex max-w-4xl flex-col items-center px-4 py-20 text-center sm:px-6">
           <span className="text-sm font-medium uppercase tracking-wider text-primary">
-            Stay Informed
+            Read With Confidence
           </span>
 
           <h2 className="mt-5 text-3xl font-semibold text-ink sm:text-5xl">
-            Built for readers who value trustworthy reporting.
+            Journalism for readers who expect more than headlines.
           </h2>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-ink-soft">
-            Whether you're following Bitcoin price movements, tracking
-            regulatory developments, researching blockchain technology, or
-            staying informed about the companies shaping the digital economy,
-            The Bit Gazette is committed to delivering timely, accurate, and
-            insightful journalism every day.
+            From breaking developments in crypto and AI to the financial and
+            regulatory stories shaping global markets, The Bit Gazette delivers
+            reporting grounded in verification, context, and editorial
+            integrity—helping readers understand not just what's happening, but
+            why it matters.
           </p>
 
           <Link
-            to="/category/news"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
+            to="/"
+            className="mt-10 inline-flex items-center gap-2 rounded-full bg-[red] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90"
           >
-            Browse Latest Stories
+            Explore Latest Stories
             <ArrowRight size={18} />
           </Link>
         </div>

@@ -11,9 +11,6 @@ const COLUMNS = [
     links: [
       { label: "About Us", to: "/about" },
       { label: "Masthead", to: "/masthead" },
-      { label: "Careers", to: "/careers" },
-      { label: "Blog", to: "/blog" },
-      { label: "Investor Relations", to: "/investor-relations" },
     ],
   },
   {
@@ -22,29 +19,22 @@ const COLUMNS = [
       { label: "Contact Us", to: "/contact" },
       { label: "Accessibility", to: "/accessibility" },
       { label: "Advertise", to: "/advertise" },
-      { label: "Media Kit", to: "/media-kit" },
-      { label: "Sitemap", to: "/sitemap" },
-      { label: "System status", to: "/status" },
     ],
   },
   {
     heading: "News",
     links: [
-      { label: "Markets", to: "/category/markets" },
+      { label: "Crypto News", to: "/category/news" },
       { label: "Finance", to: "/category/finance" },
       { label: "Tech", to: "/category/tech" },
-      { label: "Policy", to: "/category/policy" },
-      { label: "Focus", to: "/category/focus" },
+      { label: "Analysis", to: "/category/expert-analysis" },
     ],
   },
   {
     heading: "Sponsored",
     links: [
-      { label: "Bitcoin Treasuries Theme Week", to: "/tag/bitcoin-treasuries" },
-      { label: "Thought Leadership", to: "/tag/thought-leadership" },
       { label: "Press Release", to: "/category/press-release" },
       { label: "MEXC", to: "/tag/mexc" },
-      { label: "Phemex", to: "/tag/phemex" },
       { label: "Stellar", to: "/tag/stellar" },
     ],
   },
