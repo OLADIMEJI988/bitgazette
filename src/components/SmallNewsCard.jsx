@@ -20,7 +20,7 @@ export default function SmallNewsCard({ post, layout = "horizontal" }) {
         </Link>
         <div className="mt-2.5 space-y-1">
           <Link to={post.link}>
-            <h4 className="font-['news-reader'] tracking-[0.06px] text-[22px] lg:text-[16px] font-regular leading-[22px] text-ink transition-colors group-hover:text-brand line-clamp-2">
+            <h4 className="font-['news-reader'] tracking-[0.06px] text-[17px] lg:text-[16px] font-regular leading-[22px] text-ink transition-colors group-hover:text-brand line-clamp-2">
               {post.title}
             </h4>
           </Link>
@@ -48,7 +48,7 @@ export default function SmallNewsCard({ post, layout = "horizontal" }) {
       </Link>
       <div className="mt-2 space-y-1">
         <Link to={post.link}>
-          <h4 className="font-['news-reader'] tracking-[0.06px] text-[22px] lg:text-[16px] font-regular leading-[22px] text-ink transition-colors group-hover:text-brand line-clamp-2">
+          <h4 className="font-['news-reader'] tracking-[0.06px] text-[17px] lg:text-[16px] font-regular leading-[22px] text-ink transition-colors group-hover:text-brand line-clamp-2">
             {post.title}
           </h4>
         </Link>

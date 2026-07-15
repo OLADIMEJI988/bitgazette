@@ -48,7 +48,7 @@ export default function LeftSidebar() {
               type="button"
               aria-selected={activeTab === tab}
               onClick={() => setActiveTab(tab)}
-              className={`-mb-px rounded-t border-b-2 px-3 py-2 font-['plus_jakarta_sans'] tracking-[0.06px] text-[18px] lg:text-sm font-medium transition-colors ${
+              className={`-mb-px rounded-t border-b-2 px-3 py-2 font-['plus_jakarta_sans'] tracking-[0.06px] text-[16px] lg:text-sm font-medium transition-colors ${
                 activeTab === tab
                   ? "border-brand text-brand"
                   : "border-transparent text-ink-muted hover:text-ink"

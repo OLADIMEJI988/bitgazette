@@ -12,7 +12,7 @@ export default function SectionHeader({
         <Icon className="w-5 h-5 text-ink group-hover:text-brand transition-colors" />
       )}
 
-      <h2 className="font-['news-reader'] tracking-[0.07px] text-[24px] lg:text-[19px] font-medium text-ink group-hover:text-brand transition-colors">
+      <h2 className="font-['news-reader'] tracking-[0.07px] text-[20px] lg:text-[19px] font-medium text-ink group-hover:text-brand transition-colors">
         {title}
       </h2>
     </>
