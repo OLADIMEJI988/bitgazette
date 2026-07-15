@@ -9,14 +9,17 @@ const leadership = [
     name: "Jerry Musa",
     role: "Chief Executive Officer (CEO) & Chief Content Officer (CCO)",
     socials: {
-      linkedin: "https://www.linkedin.com/in/jeremiah-musa?utm_source=share_via&utm_content=profile&ut m_medium=member_android ",
+      linkedin:
+        "https://www.linkedin.com/in/jeremiah-musa?utm_source=share_via&utm_content=profile&ut m_medium=member_android ",
+      facebook: "https://www.facebook.com/jerrydstrawberry",
     },
   },
   {
     name: "Mark Frost",
     role: "Co-Founder",
     socials: {
-      linkedin: "https://www.linkedin.com/in/mark-frost-00a1b4321?utm_source=share_via&utm_content=pro file&utm_medium=member_android ",
+      linkedin:
+        "https://www.linkedin.com/in/mark-frost-00a1b4321?utm_source=share_via&utm_content=pro file&utm_medium=member_android ",
     },
   },
 ];
@@ -25,18 +28,20 @@ const editorial = [
   {
     name: "Olivia",
     role: "Managing Editor",
-    socials: {
-      x: "https://x.com/...",
-      linkedin: "https://linkedin.com/in/...",
-      instagram: "https://instagram.com/...",
-      facebook: "https://facebook.com/...",
-    },
+    // socials: {
+    //   x: "https://x.com/...",
+    //   linkedin: "https://linkedin.com/in/...",
+    //   instagram: "https://instagram.com/...",
+    //   facebook: "https://facebook.com/...",
+    // },
   },
   {
     name: "Ayuba Haruna",
     role: "Editor",
     socials: {
-      linkedin: "https://www.linkedin.com/in/ayuba-haruna?utm_source=share_via&utm_content=profile&utm _medium=member_android ",
+      linkedin:
+        "https://www.linkedin.com/in/ayuba-haruna?utm_source=share_via&utm_content=profile&utm _medium=member_android ",
+      facebook: "https://www.facebook.com/ayuba.haruna.9615",
     },
   },
 ];
@@ -46,14 +51,18 @@ const writers = [
     name: "Moses Edozie",
     role: "Writer & Reporter",
     socials: {
-      linkedin: "https://www.linkedin.com/in/moses-edozie-b11a6b279?utm_source=share_via&utm_content =profile&utm_medium=member_android ",
+      linkedin:
+        "https://www.linkedin.com/in/moses-edozie-b11a6b279?utm_source=share_via&utm_content =profile&utm_medium=member_android ",
+      x: "https://x.com/Moses63315327",
+      facebook: "https://www.facebook.com/moses.edozie.2025",
     },
   },
   {
     name: "Elizabeth",
     role: "Writer & Reporter",
     socials: {
-      linkedin: "https://www.linkedin.com/in/oyebayo-elizabeth-49b0ab185?utm_source=share_via&utm_con tent=profile&utm_medium=member_ios ",
+      linkedin:
+        "https://www.linkedin.com/in/oyebayo-elizabeth-49b0ab185?utm_source=share_via&utm_con tent=profile&utm_medium=member_ios ",
     },
   },
   {
@@ -61,27 +70,31 @@ const writers = [
     role: "Writer & Reporter",
     socials: {
       facebook: "https://www.facebook.com/share/1Bj6b4nX7n/ ",
+      x: "https://x.com/FuutbolHome?t=Rquq3_12NWNxG8qoqQzgAg&s=09",
     },
   },
   {
     name: "Emmanuel Musa",
     role: "Writer & Reporter",
     socials: {
-      linkedin: "https://www.linkedin.com/in/manuelceebam?utm_source=share_via&utm_content=profile&ut m_medium=member_android ",
+      linkedin:
+        "https://www.linkedin.com/in/manuelceebam?utm_source=share_via&utm_content=profile&ut m_medium=member_android ",
     },
   },
   {
     name: "Davidson",
     role: "Writer & Reporter",
     socials: {
-      linkedin: "https://www.linkedin.com/in/davidre026?utm_source=share_via&utm_content=profile&utm_ medium=member_android ",
+      linkedin:
+        "https://www.linkedin.com/in/davidre026?utm_source=share_via&utm_content=profile&utm_ medium=member_android ",
     },
   },
   {
     name: "Victor Ray",
     role: "Writer & Reporter",
     socials: {
-      linkedin: "https://www.linkedin.com/in/victor-adinoyi-ohagwasi-926908200?utm_source=share_via&ut m_content=profile&utm_medium=member_android ",
+      linkedin:
+        "https://www.linkedin.com/in/victor-adinoyi-ohagwasi-926908200?utm_source=share_via&ut m_content=profile&utm_medium=member_android ",
     },
   },
 ];
