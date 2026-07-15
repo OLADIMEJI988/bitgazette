@@ -30,7 +30,7 @@ export default function Navbar() {
   }, [menuOpen]);
 
   return (
-    <header className="font-['Plus_Jakarta_Sans'] sticky top-0 z-50 border-b border-surface-border bg-white">
+    <header className="font-['news-reader'] sticky top-0 z-50 border-b border-surface-border bg-white">
       <div className="mx-auto flex h-[72px] max-w-content items-center justify-between gap-4 px-4 lg:px-6">
         <Link
           to="/"
@@ -50,7 +50,7 @@ export default function Navbar() {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `whitespace-nowrap text-[14px] font-medium transition-colors hover:text-brand ${
+                `whitespace-nowrap text-[16px] tracking-[0.08px] font-medium transition-colors hover:text-brand ${
                   isActive ? "text-brand" : "text-ink"
                 }`
               }
@@ -86,7 +86,7 @@ export default function Navbar() {
           <div className="h-[40px] bg-[#D9D9D9] w-[1px]"></div>
           <Link
             to="/login"
-            className="ml-1 hidden tracking-[0.04px] rounded-full bg-[#A6A6A6]/15 px-4 py-2 text-[14px] font-medium text-ink transition-colors hover:bg-ink/90 border-[#F1EEEE] sm:inline-flex shadow-[inset_0_0_5px_rgba(255,255,255,0.2),inset_0_4px_5px_rgba(255,255,255,0.2),inset_0_-4px_5px_rgba(255,255,255,0.2)]"
+            className="ml-1 hidden tracking-[0.08px] rounded-full bg-[#A6A6A6]/15 px-4 py-2 text-[14px] font-medium text-ink transition-colors hover:bg-ink/90 border-[#F1EEEE] sm:inline-flex shadow-[inset_0_0_5px_rgba(255,255,255,0.2),inset_0_4px_5px_rgba(255,255,255,0.2),inset_0_-4px_5px_rgba(255,255,255,0.2)]"
           >
             Login
           </Link>
@@ -125,12 +125,12 @@ export default function Navbar() {
               name="q"
               type="search"
               placeholder="Search crypto news, coins, companies…"
-              className="w-full rounded border border-surface-border px-4 py-2 text-sm focus:border-brand focus:outline-none"
+              className="w-full rounded border border-surface-border placeholder:font-['manrope'] tracking-wide px-4 py-2 text-sm focus:border-brand focus:outline-none font-['manrope']"
               autoFocus
             />
             <button
               type="submit"
-              className="rounded bg-brand px-4 py-2 text-sm font-semibold text-white"
+              className="rounded bg-brand px-4 py-2 text-sm font-['manrope'] tracking-wide font-semibold text-white"
             >
               Search
             </button>
@@ -172,7 +172,7 @@ export default function Navbar() {
                       to={link.to}
                       onClick={() => setMenuOpen(false)}
                       className={({ isActive }) =>
-                        `block rounded-xl px-4 py-4 text-[16px] font-medium transition-colors ${
+                        `block rounded-xl px-4 py-4 text-[17px] font-['news-reader'] tracking-[0.06px] font-medium transition-colors ${
                           isActive
                             ? "bg-brand-light text-brand"
                             : "text-ink hover:bg-surface-alt"
@@ -188,7 +188,7 @@ export default function Navbar() {
               <Link
                 to="/login"
                 onClick={() => setMenuOpen(false)}
-                className="mt-8 block rounded-xl bg-brand px-4 py-4 text-center text-[16px] font-semibold text-white"
+                className="mt-8 block rounded-xl bg-brand px-4 py-4 text-center tracking-[0.08px] text-[16px] font-['manrope'] font-semibold text-white"
               >
                 Login
               </Link>

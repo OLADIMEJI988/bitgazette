@@ -6,6 +6,7 @@ import {
   getTechPosts,
 } from "../services/posts";
 import SidebarWidget from "./SidebarWidget";
+import { AnimatedChartIcon, AnimatedMegaphoneIcon, AnimatedTechIcon } from "./ui/AnimatedIcons";
 
 export default function RightSidebar() {
   const expert = useFetch(() => getExpertAnalysis({ perPage: 3 }), []);
@@ -16,6 +17,7 @@ export default function RightSidebar() {
     <aside className="space-y-8 lg:space-y-6 h-full" aria-label="Sidebar">
       <SidebarWidget
         title="Expert Analysis"
+        Icon={AnimatedChartIcon}
         to="/category/expert-analysis"
         posts={expert.data}
         loading={expert.loading}
@@ -32,6 +34,7 @@ export default function RightSidebar() {
 
       <SidebarWidget
         title="Sponsored Articles"
+        Icon={AnimatedMegaphoneIcon}
         to="/category/sponsored-articles"
         posts={sponsored.data}
         loading={sponsored.loading}
@@ -39,16 +42,17 @@ export default function RightSidebar() {
         layout="stacked"
       />
 
-        <div className="sticky top-20">
-          <SidebarWidget
-            title="Tech"
-            to="/category/tech"
-            posts={tech.data}
-            loading={tech.loading}
-            error={tech.error}
-            layout="stacked"
-          />
-        </div>
+      <div className="sticky top-20">
+        <SidebarWidget
+          title="Tech"
+          Icon={AnimatedTechIcon}
+          to="/category/tech"
+          posts={tech.data}
+          loading={tech.loading}
+          error={tech.error}
+          layout="stacked"
+        />
+      </div>
     </aside>
   );
 }

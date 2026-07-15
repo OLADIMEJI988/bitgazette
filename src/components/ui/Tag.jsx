@@ -1,15 +1,17 @@
 import {
-  Radio,
-  Bitcoin,
-  Cpu,
-  BrainCircuit,
-  Landmark,
-  MessageSquareQuote,
-  ChartColumnIncreasing,
-  Newspaper,
-  Megaphone,
   Tag as TagIcon,
 } from "lucide-react";
+
+import {
+  ChartIcon,
+  MegaphoneIcon,
+  TechIcon,
+  TrendingIcon,
+  OpinionIcon,
+  PressReleaseIcon,
+  BitcoinIcon,
+  FinanceIcon,
+} from "./AnimatedIcons";
 
 const VARIANTS = {
   category: "bg-[#A6A6A6]/15 hover:bg-brand hover:text-white text-ink transition-all duration-300 ease-in-out",
@@ -25,18 +27,18 @@ const VARIANTS = {
 };
 
 const ICONS = {
-  breaking: <Radio size={15} className="animate-gentle-pulse" />,
-  sponsored: <Megaphone size={15} className="animate-gentle-pulse" />,
-  tech: <Cpu size={15} />,
-  finance: <Landmark size={15} />,
-  crypto: <Bitcoin size={15} />,
-  bitcoin: <Bitcoin size={15} />,
-  ai: <BrainCircuit size={15} className="animate-gentle-pulse" />,
-  opinion: <MessageSquareQuote size={15} />,
-  analysis: <ChartColumnIncreasing size={15} />,
-  "expert analysis": <ChartColumnIncreasing size={15} />,
-  "press release": <Newspaper size={15} />,
-  press: <Newspaper size={15} />,
+  breaking: <TrendingIcon className="w-[17px] h-[17px]" />,
+  sponsored: <MegaphoneIcon className="w-[17px] h-[17px]" />,
+  tech: <TechIcon className="w-[17px] h-[17px]" />,
+  finance: <FinanceIcon className="w-[17px] h-[17px]" />,
+  crypto: <BitcoinIcon className="w-[17px] h-[17px]" />,
+  bitcoin: <BitcoinIcon className="w-[17px] h-[17px]" />,
+  ai: <TechIcon className="w-[17px] h-[17px]" />, // or make a dedicated AI icon
+  opinion: <OpinionIcon className="w-[17px] h-[17px]" />,
+  analysis: <ChartIcon className="w-[17px] h-[17px]" />,
+  "expert analysis": <ChartIcon className="w-[17px] h-[17px]" />,
+  "press release": <PressReleaseIcon className="w-[17px] h-[17px]" />,
+  press: <PressReleaseIcon className="w-[17px] h-[17px]" />,
 };
 
 const getIcon = (value = "", variant = "category") => {
@@ -72,7 +74,7 @@ export default function Tag({
 
   return (
     <span
-      className={`inline-flex font-['Plus_Jakarta_Sans'] items-center gap-1.5 rounded-sm px-2.5 py-1 text-[14px] font-semibold uppercase tracking-wide ${VARIANTS[variant]} ${className}`}
+      className={`inline-flex font-['manrope'] items-center gap-1.5 rounded-sm px-2.5 py-1 text-[14px] font-semibold uppercase tracking-wide ${VARIANTS[variant]} ${className}`}
       {...props}
     >
       {icon}

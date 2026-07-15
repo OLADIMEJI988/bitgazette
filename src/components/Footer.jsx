@@ -61,7 +61,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-surface-border bg-surface font-['Plus_Jakarta_Sans']">
+    <footer className="border-t border-surface-border bg-surface">
       <div className="mx-auto max-w-content px-4 py-9">
         <Link to="/" className="inline-block" aria-label="The Bit Gazette home">
           <img src={logo} alt="The Bit Gazette" className="h-[78px] w-auto" />
@@ -70,10 +70,10 @@ export default function Footer() {
         <div className="mt-9 grid grid-cols-2 gap-8 w-full mx-1 lg:mx-0 sm:grid-cols-2 lg:grid-cols-4 lg:w-[94%]">
           {COLUMNS.map((col) => (
             <div key={col.heading} className="w-full">
-              <h3 className="mb-4 text-[14px] font-semibold text-ink">
+              <h3 className="mb-4 text-[16px] font-['news-reader'] font-medium tracking-[0.08px] text-ink">
                 {col.heading}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 font-['manrope'] tracking-[0.06px]">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
@@ -89,8 +89,8 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col-reverse items-center justify-between gap-4 border-t border-surface-border pt-7 sm:flex-row">
-          <div className="hidden lg:flex flex-wrap items-center gap-5 text-xs text-ink-muted tracking-[0.02px]">
+        <div className="mt-12 font-['manrope'] tracking-[0.06px] flex flex-col-reverse items-center justify-between gap-4 border-t border-surface-border pt-7 sm:flex-row">
+          <div className="hidden lg:flex flex-wrap items-center gap-5 text-xs text-ink-muted">
             <span>Copyright © 2025 The Bit Gazette.</span>
             <Link to="/ethics" className="hover:text-brand">
               Ethics
@@ -103,7 +103,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="flex flex-col lg:hidden flex-wrap items-center text-xs text-ink-muted tracking-[0.02px] mt-2">
+          <div className="flex flex-col lg:hidden flex-wrap items-center text-xs text-ink-muted mt-2">
             <p>Copyright © 2025 The Bit Gazette.</p>
             <div className="flex gap-5 mt-2">
               <Link to="/ethics" className="hover:text-brand">

@@ -53,7 +53,7 @@ export default function PostPage() {
   const pinterestShareUrl = `https://pinterest.com/pin/create/button/?url=${shareUrl}&description=${shareTitle}&media=${encodeURIComponent(post.image)}`;
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-8 font-['Plus_Jakarta_Sans']">
+    <article className="mx-auto max-w-3xl px-4 py-8 font-['marope'] tracking-[0.06px]">
       <div className="mb-4 flex flex-wrap gap-2">
         {post.breaking && <Tag variant="breaking">Breaking News</Tag>}
         {post.categories.map((cat) => (
@@ -63,7 +63,7 @@ export default function PostPage() {
         ))}
       </div>
 
-      <h1 className="text-2xl font-bold leading-tight text-ink sm:text-3xl">
+      <h1 className="text-2xl font-['news-reader'] tracking-[0.06px] font-medium leading-tight text-ink sm:text-3xl">
         {post.title}
       </h1>
 
@@ -78,7 +78,7 @@ export default function PostPage() {
         <div className="text-sm">
           <Link
             to={`/author/${post.author.slug}`}
-            className="font-semibold text-ink hover:text-brand"
+            className="font-medium text-ink hover:text-brand"
           >
             {post.author.name}
           </Link>
@@ -98,7 +98,7 @@ export default function PostPage() {
       </div>
 
       <div
-        className="prose prose-neutral mt-8 max-w-none prose-headings:font-display prose-a:text-brand"
+        className="prose prose-neutral mt-8 max-w-none prose-headings:font-['news-reader'] prose-headings:tracking-[0.06px] prose-headings:font-medium prose-a:text-brand"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 

@@ -7,6 +7,7 @@ import {
 } from "../services/posts";
 import SmallNewsCard from "./SmallNewsCard";
 import SidebarWidget from "./SidebarWidget";
+import { AnimatedTrendingIcon } from "./ui/AnimatedIcons";
 import { ListSkeleton, SmallNewsCardSkeleton } from "./ui/Loaders";
 import { EmptyState, ErrorState } from "./ui/StateMessage";
 
@@ -47,7 +48,7 @@ export default function LeftSidebar() {
               type="button"
               aria-selected={activeTab === tab}
               onClick={() => setActiveTab(tab)}
-              className={`-mb-px rounded-t border-b-2 px-3 py-2 lg:text-sm font-semibold font-['Plus_Jakarta_Sans'] transition-colors ${
+              className={`-mb-px rounded-t border-b-2 px-3 py-2 font-['plus_jakarta_sans'] tracking-[0.06px] lg:text-sm font-medium transition-colors ${
                 activeTab === tab
                   ? "border-brand text-brand"
                   : "border-transparent text-ink-muted hover:text-ink"
@@ -79,6 +80,7 @@ export default function LeftSidebar() {
       <div className="lg:sticky lg:top-20 lg:max-h-[calc(100vh-1px)] lg:overflow-hidden">
         <SidebarWidget
           title="Trending"
+          Icon={AnimatedTrendingIcon}
           to="/category/trending-stories"
           posts={trending}
           loading={trendingLoading}

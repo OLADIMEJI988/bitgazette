@@ -21,12 +21,12 @@ export default function NewsCard({ post }) {
 
       <div className="flex flex-1 flex-col gap-2 sm:gap-1.5">
         <Link to={post.link}>
-          <h3 className="font-['Plus_Jakarta_Sans'] text-[18px] font-medium leading-7 text-ink transition-colors group-hover:text-brand sm:text-[16px] sm:leading-[26px]">
+          <h3 className="font-['news-reader'] tracking-[0.06px] text-[18px] font-medium leading-7 text-ink transition-colors group-hover:text-brand sm:text-[20px] sm:leading-[26px]">
             {post.title}
           </h3>
         </Link>
 
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-['Plus_Jakarta_Sans'] text-[13px] text-ink-muted sm:text-xs">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-['manrope'] tracking-[0.06px] text-[13px] text-ink-muted sm:text-xs">
           <span>
             By{" "}
             <span className="font-medium text-ink-soft">

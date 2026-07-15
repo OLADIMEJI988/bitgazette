@@ -26,7 +26,7 @@ export default function FeaturedArticle({ post, loading }) {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="font-['Plus_Jakarta_Sans'] pb-5"
+      className="pb-5"
     >
       <Link to={post.link} className="group block">
         <div className="aspect-[15/9] w-full overflow-hidden bg-surface-alt">
@@ -49,11 +49,11 @@ export default function FeaturedArticle({ post, loading }) {
           </Tag>
         ))}
         <Link to={post.link}>
-          <h1 className="text-[24px] mt-3 font-medium leading-[30px] text-ink group-hover:text-brand sm:text-[24px]">
+          <h1 className="font-['news-reader'] tracking-[0.06px] text-[24px] mt-3 font-medium leading-[30px] text-ink group-hover:text-brand sm:text-[24px]">
             {post.title}
           </h1>
         </Link>
-        <p className="flex flex-wrap items-center gap-2 text-[12px] text-ink-soft">
+        <p className="flex flex-wrap items-center font-['manrope'] tracking-[0.06px] gap-2 text-[12px] text-ink-soft">
           <span className="gap-1 flex">
             By{" "}
             <span className="text-ink">{post.author.name}</span>

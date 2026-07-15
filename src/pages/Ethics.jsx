@@ -27,16 +27,16 @@ const sections = [
       <>
         <ul className="space-y-8">
           <li>
-            <strong className="block text-gray-900 mb-2">Named Sources</strong>
+            <p className="block text-gray-900 mb-2 font-['news-reader'] font-medium">Named Sources</p>
             We do not publish anonymous sourcing. References such as "industry
             observers say" or "analysts note" without clearly identifying the
             source are not permitted in our reporting.
           </li>
 
           <li>
-            <strong className="block text-gray-900 mb-2">
+            <p className="block text-gray-900 mb-2 font-['news-reader'] font-medium">
               Verified Quotations
-            </strong>
+            </p>
             Every direct quotation must be traceable to a verifiable primary
             source—including interviews, official statements, press releases,
             public filings, or social media posts—with an identifiable date,
@@ -44,9 +44,9 @@ const sections = [
           </li>
 
           <li>
-            <strong className="block text-gray-900 mb-2">
+            <p className="block text-gray-900 mb-2 font-['news-reader'] font-medium">
               Independent Verification
-            </strong>
+            </p>
             Facts, figures, and claims are checked against primary and
             independent sources before publication. Press releases are treated
             as sources—not proof.
@@ -182,8 +182,8 @@ const sections = [
 
 function PolicySection({ title, content }) {
   return (
-    <section className="font-['Plus_Jakarta_Sans'] mt-10 md:mt-14 pt-8 md:pt-14 border-t border-gray-300">
-      <h2 className="mb-10 md:mb-14 text-xl md:text-2xl font-medium uppercase tracking-wide text-gray-600">
+    <section className="font-['manrope'] tracking-wide mt-10 md:mt-14 pt-8 md:pt-14 border-t border-gray-300">
+      <h2 className="mb-10 md:mb-14 text-xl md:text-2xl font-['news-reader'] font-medium uppercase text-gray-600">
         {title}
       </h2>
 
@@ -196,14 +196,14 @@ function PolicySection({ title, content }) {
 
 export default function Ethics() {
   return (
-    <main className="font-['Plus_Jakarta_Sans']">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
+    <main className="font-['manrope']">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-14">
         <div className="max-w-6xl">
-          <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900">
+          <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-['news-reader'] font-medium tracking-wide text-gray-900">
             Editorial Ethics & Standards
           </h1>
 
-          <p className="mt-8 text-base md:text-[22px] leading-8 text-gray-600">
+          <p className="mt-8 text-base md:text-[22px] tracking-wide leading-8 text-gray-600">
             At The Bit Gazette, trust is our most valuable asset. Our readers
             rely on us for accurate reporting, thoughtful analysis, and
             independent journalism across cryptocurrency, blockchain,

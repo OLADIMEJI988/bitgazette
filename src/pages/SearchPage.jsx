@@ -18,8 +18,8 @@ export default function SearchPage() {
   );
 
   return (
-    <div className="mx-auto max-w-content px-4 py-8">
-      <h1 className="mb-6 font-display text-2xl font-extrabold text-ink">Search</h1>
+    <div className="mx-auto max-w-content px-4 py-8 font-['manrope'] tracking-wide">
+      <h1 className="mb-6 font-['news-reader'] text-2xl font-medium text-ink">Search</h1>
 
       <form
         role="search"
@@ -37,7 +37,7 @@ export default function SearchPage() {
           placeholder="Search crypto news, coins, companies…"
           className="w-full rounded border border-surface-border px-4 py-2.5 text-sm focus:border-brand focus:outline-none"
         />
-        <button type="submit" className="flex items-center gap-2 rounded bg-brand px-4 py-2.5 text-sm font-semibold text-white">
+        <button type="submit" className="flex items-center gap-2 rounded bg-brand px-4 py-2.5 text-sm font-medium text-white">
           <SearchIcon size={16} /> Search
         </button>
       </form>

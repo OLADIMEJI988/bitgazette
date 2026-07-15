@@ -15,8 +15,8 @@ export default function CategoryPage() {
   );
 
   return (
-    <div className="mx-auto max-w-content px-4 py-8 font-['Plus_Jakarta_Sans']">
-      <h1 className="mb-6 text-2xl font-semibold capitalize text-ink">
+    <div className="mx-auto max-w-content px-4 py-8 font-['news-reader'] tracking-wide">
+      <h1 className="mb-6 text-2xl font-medium capitalize text-ink">
         {slug.replace(/-/g, ' ')}
       </h1>
       <div className="mx-auto max-w-3xl">

@@ -56,12 +56,12 @@ const stats = [
 
 export default function About() {
   return (
-    <main className="bg-background font-['Plus_Jakarta_Sans']">
+    <main className="bg-background font-['manrope']">
       {/* Hero */}
       <section>
-        <div className="mx-auto flex flex-col gap-12 px-4 py-16 sm:px-6 lg:justify-between">
+        <div className="mx-auto flex flex-col gap-12 px-4 py-14 sm:px-6 lg:justify-between">
           <div>
-            <h1 className="mt-6 text-4xl font-semibold leading-tight text-ink sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 text-4xl font-['news-reader'] font-medium leading-tight text-ink sm:text-5xl lg:text-6xl">
               Global stories. Nigerian talent.
             </h1>
           </div>
@@ -90,7 +90,7 @@ export default function About() {
               Our Mission
             </span>
 
-            <h2 className="mt-4 text-3xl font-semibold text-ink">
+            <h2 className="mt-4 text-3xl font-['news-reader'] font-medium text-ink">
               A global newsroom built on local talent.
             </h2>
 
@@ -118,7 +118,7 @@ export default function About() {
               What We Cover
             </span>
 
-            <h2 className="mt-4 text-3xl font-semibold text-ink">
+            <h2 className="mt-4 text-3xl font-['news-reader'] font-medium text-ink">
               Reporting on the industries shaping tomorrow.
             </h2>
 
@@ -146,7 +146,7 @@ export default function About() {
                 key={stat.label}
                 className="rounded-2xl border border-line bg-surface p-8 text-center"
               >
-                <div className="text-4xl font-bold text-primary">
+                <div className="text-4xl font-['news-reader'] font-medium text-primary">
                   {stat.value}
                 </div>
 
@@ -164,7 +164,7 @@ export default function About() {
             Editorial Standards
           </span>
 
-          <h2 className="mt-4 text-3xl font-semibold text-ink sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-['news-reader'] font-medium text-ink sm:text-4xl">
             Every story earns our readers' trust.
           </h2>
 
@@ -183,7 +183,7 @@ export default function About() {
             >
               <div className="mb-6 h-1.5 w-12 rounded-full bg-primary" />
 
-              <h3 className="text-xl font-semibold text-ink">{item.title}</h3>
+              <h3 className="text-xl font-medium text-ink font-['news-reader']">{item.title}</h3>
 
               <p className="mt-4 flex-1 leading-8 text-ink-soft">{item.text}</p>
             </div>
@@ -193,12 +193,12 @@ export default function About() {
 
       {/* CTA */}
       <section className="bg-surface-secondary">
-        <div className="mx-auto flex max-w-4xl flex-col items-center px-4 py-20 text-center sm:px-6">
+        <div className="mx-auto flex max-w-3xl flex-col items-center px-4 py-20 text-center sm:px-6">
           <span className="text-sm font-medium uppercase tracking-wider text-primary">
             Read With Confidence
           </span>
 
-          <h2 className="mt-5 text-3xl font-semibold text-ink sm:text-5xl">
+          <h2 className="mt-5 text-3xl font-['news-reader'] font-medium text-ink sm:text-5xl">
             Journalism for readers who expect more than headlines.
           </h2>
 

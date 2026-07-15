@@ -51,8 +51,8 @@ const writers = [
 
 function TeamSection({ title, members }) {
   return (
-    <section className="mt-10 md:mt-14 pt-8 md:pt-14 border-t border-gray-300 font-['Plus_Jakarta_Sans']">
-      <h2 className="mb-10 md:mb-14 text-xl md:text-2xl font-medium uppercase tracking-wide text-gray-600">
+    <section className="mt-10 md:mt-14 font-['manrope'] pt-8 md:pt-14 border-t border-gray-300">
+      <h2 className="mb-10 md:mb-14 font-['news-reader'] text-xl md:text-2xl font-medium uppercase tracking-wide text-gray-600">
         {title}
       </h2>
 
@@ -62,11 +62,11 @@ function TeamSection({ title, members }) {
             key={member.name}
             className="border-t border-gray-300 py-10 md:py-12"
           >
-            <h3 className="text-3xl md:text-[2.1rem] font-medium tracking-tight text-gray-900">
+            <h3 className="text-3xl md:text-[2.1rem] font-medium tracking-wide text-gray-900">
               {member.name}
             </h3>
 
-            <p className="mt-2 text-base md:text-lg uppercase tracking-wide text-gray-600">
+            <p className="mt-3 text-base md:text-lg uppercase tracking-wide text-gray-600">
               {member.role}
             </p>
 
@@ -106,14 +106,14 @@ function TeamSection({ title, members }) {
 
 export default function MastHead() {
   return (
-    <main className="font-['Plus_Jakarta_Sans']">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
+    <main className="font-['manrope']">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-14">
         <div className="max-w-6xl">
-          <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900">
+          <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-['news-reader'] font-medium tracking-wide text-gray-900">
             Masthead
           </h1>
 
-          <p className="mt-8 text-base md:text-[22px] leading-8 text-gray-600">
+          <p className="mt-8 text-base tracking-wide md:text-[22px] leading-8 text-gray-600">
             The Bit Gazette brings together experienced journalists, editors,
             researchers, and contributors who are passionate about delivering
             reliable, insightful, and independent journalism. Our team works

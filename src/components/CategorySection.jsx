@@ -9,7 +9,7 @@ import { EmptyState, ErrorState } from "./ui/StateMessage";
  * Renders one lower-homepage category block: heading + 3 stacked stories.
  * `slug` must match a real WordPress category slug.
  */
-export default function CategorySection({ title, slug, isLast }) {
+export default function CategorySection({ title, slug, Icon, isLast }) {
   const { data, loading, error, refetch } = useFetch(
     () => getPostsByCategory(slug, { perPage: 3 }),
     [slug],
@@ -18,7 +18,7 @@ export default function CategorySection({ title, slug, isLast }) {
 
   return (
     <section aria-label={title}>
-      <SectionHeader title={title} to={`/category/${slug}`} />
+      <SectionHeader title={title} Icon={Icon} to={`/category/${slug}`} />
       {loading && (
         <div
           className={`space-y-6 lg:pr-5 ${

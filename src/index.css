@@ -1,4 +1,7 @@
 @import "@fontsource/plus-jakarta-sans";
+@import "@fontsource/manrope";
+@import "@fontsource/newsreader";
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +9,8 @@
 
 @theme {
   --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --font-news: "Newsreader", serif;
 }
 
 :root {
@@ -40,20 +45,10 @@ html {
 body {
   overflow-x: hidden;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Manrope", sans-serif;
   color: var(--color-ink);
   background-color: var(--color-surface-alt);
-  font-family: var(--font-display);
   -webkit-font-smoothing: antialiased;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 img {

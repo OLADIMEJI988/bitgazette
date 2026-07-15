@@ -3,12 +3,14 @@ import SmallNewsCard from "./SmallNewsCard";
 import { ListSkeleton, SmallNewsCardSkeleton } from "./ui/Loaders";
 import { EmptyState } from "./ui/StateMessage";
 
+
 export default function SidebarWidget({
   title,
   to,
   posts,
   loading,
   error,
+  Icon,
   layout = "stacked",
   className = "",
 }) {
@@ -17,7 +19,7 @@ export default function SidebarWidget({
       className={`rounded-[8px] lg:border lg:border-surface-border mt-5 lg:mt-0 lg:bg-surface lg:py-5 lg:px-5 ${className}`}
       aria-label={title}
     >
-      <SectionHeader title={title} to={to} />
+      <SectionHeader title={title} to={to} Icon={Icon} />
 
       <div className="min-h-0 flex-1 overflow-y-auto no-scrollbar">
         {loading && (

@@ -1,25 +1,33 @@
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-export default function SectionHeader({ title, to, className = '' }) {
-  const content = (
+export default function SectionHeader({
+  title,
+  to,
+  Icon,
+  className = "",
+}) {
+  const headerContent = (
     <>
-      <h2 className="font-['Plus_Jakarta_Sans'] text-lg font-medium text-ink">{title}</h2>
-      {to && <ArrowRight size={18} className="text-ink-muted" aria-hidden="true" />}
+      {Icon && (
+        <Icon className="w-5 h-5 text-ink group-hover:text-brand transition-colors" />
+      )}
+
+      <h2 className="font-['news-reader'] tracking-[0.07px] text-[18px] lg:text-[19px] font-medium text-ink group-hover:text-brand transition-colors">
+        {title}
+      </h2>
     </>
   );
 
   return (
     <div className={`flex items-center justify-between pb-6 ${className}`}>
       {to ? (
-        <Link to={to} className="flex w-full items-center gap-2 group">
-          <h2 className="font-['Plus_Jakarta_Sans'] text-[18px] lg:text-[16px] font-medium text-ink group-hover:text-brand transition-colors">
-            {title}
-          </h2>
-          {/* <ArrowRight size={18} className="text-ink group-hover:text-brand transition-colors" aria-hidden="true" /> */}
+        <Link to={to} className="flex w-full items-center gap-[6px] group">
+          {headerContent}
         </Link>
       ) : (
-        content
+        <div className="flex items-center gap-[6px]">
+          {headerContent}
+        </div>
       )}
     </div>
   );
