@@ -98,7 +98,7 @@ export default function PostPage() {
       </div>
 
       <div
-        className="prose prose-neutral mt-8 max-w-none prose-headings:font-['news-reader'] prose-headings:tracking-[0.06px] prose-headings:font-medium prose-a:text-brand"
+        className="prose prose-neutral mt-8 !max-w-none prose-headings:font-['news-reader'] prose-headings:tracking-[0.06px] prose-headings:font-medium prose-a:text-brand"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 

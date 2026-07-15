@@ -153,3 +153,7 @@ input:focus-visible {
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+.prose {
+  max-width: none !important;
+}

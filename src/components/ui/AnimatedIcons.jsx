@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import AnimatedPath from "../AnimatedPath";
+import { CgPathBack } from "react-icons/cg";
 
 export function AnimatedChartIcon({ className }) {
   return (
@@ -447,6 +448,99 @@ export function AnimatedBitcoinIcon({ className }) {
   );
 }
 
+// export function AnimatedFinanceIcon({ className }) {
+//   return (
+//     <svg
+//       className={className}
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       xmlns="http://www.w3.org/2000/svg"
+//     >
+//       {/* Axes */}
+//       <motion.path
+//         d="M3 3V13C3 16.7712 3 18.6569 4.17157 19.8284C5.34315 21 7.22876 21 11 21H21"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//         duration={1}
+//       />
+
+//       {/* Left bar */}
+//       <AnimatedPath
+//         d="M11 13V11C11 10.535 11 10.3025 10.9489 10.1118C10.8102 9.59413 10.4059 9.18981 9.88823 9.05111C9.69748 9 9.46499 9 9 9C8.53501 9 8.30252 9 8.11177 9.05111C7.59413 9.18981 7.18981 9.59413 7.05111 10.1118C7 10.3025 7 10.535 7 11V13C7 13.465 7 13.6975 7.05111 13.8882C7.18981 14.4059 7.59413 14.8102 8.11177 14.9489C8.30252 15 8.53501 15 9 15C9.46499 15 9.69748 15 9.88823 14.9489C10.4059 14.8102 10.8102 14.4059 10.9489 13.8882C11 13.6975 11 13.465 11 13Z"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//         duration={0.7}
+//         delay={0.4}
+//         pauseBeforeReverse={3000}
+//       />
+
+//       {/* Right bar */}
+//       <AnimatedPath
+//         d="M19 12V8C19 7.53501 19 7.30252 18.9489 7.11177C18.8102 6.59413 18.4059 6.18981 17.8882 6.05111C17.6975 6 17.465 6 17 6C16.535 6 16.3025 6 16.1118 6.05111C15.5941 6.18981 15.1898 6.59413 15.0511 7.11177C15 7.30252 15 7.53501 15 8V12C15 12.465 15 12.6975 15.0511 12.8882C15.1898 13.4059 15.5941 13.8102 16.1118 13.9489C16.3025 14 16.535 14 17 14C17.465 14 17.6975 14 17.8882 13.9489C18.4059 13.8102 18.8102 13.4059 18.9489 12.8882C19 12.6975 19 12.465 19 12Z"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//         duration={0.7}
+//         delay={0.7}
+//         pauseBeforeReverse={3000}
+//       />
+
+//       {/* Left connectors */}
+//       <AnimatedPath
+//         d="M9 9V5"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//         duration={0.3}
+//         delay={1.1}
+//         pauseBeforeReverse={3000}
+//       />
+
+//       <AnimatedPath
+//         d="M9 15V17"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//         duration={0.3}
+//         delay={1.25}
+//         pauseBeforeReverse={3000}
+//       />
+
+//       {/* Right connectors */}
+//       <AnimatedPath
+//         d="M17 6V3"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//         duration={0.3}
+//         delay={1.4}
+//         pauseBeforeReverse={3000}
+//       />
+
+//       <AnimatedPath
+//         d="M17 14V17"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//         duration={0.3}
+//         delay={1.55}
+//         pauseBeforeReverse={3000}
+//       />
+//     </svg>
+//   );
+// }
+
 export function AnimatedFinanceIcon({ className }) {
   return (
     <svg
@@ -457,9 +551,9 @@ export function AnimatedFinanceIcon({ className }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Axes */}
+      {/* Outer refresh circle */}
       <motion.path
-        d="M3 3V13C3 16.7712 3 18.6569 4.17157 19.8284C5.34315 21 7.22876 21 11 21H21"
+        d="M2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C7.89936 2 4.3752 4.46819 2.83209 8"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
@@ -467,79 +561,115 @@ export function AnimatedFinanceIcon({ className }) {
         duration={1}
       />
 
-      {/* Left bar */}
-      <AnimatedPath
-        d="M11 13V11C11 10.535 11 10.3025 10.9489 10.1118C10.8102 9.59413 10.4059 9.18981 9.88823 9.05111C9.69748 9 9.46499 9 9 9C8.53501 9 8.30252 9 8.11177 9.05111C7.59413 9.18981 7.18981 9.59413 7.05111 10.1118C7 10.3025 7 10.535 7 11V13C7 13.465 7 13.6975 7.05111 13.8882C7.18981 14.4059 7.59413 14.8102 8.11177 14.9489C8.30252 15 8.53501 15 9 15C9.46499 15 9.69748 15 9.88823 14.9489C10.4059 14.8102 10.8102 14.4059 10.9489 13.8882C11 13.6975 11 13.465 11 13Z"
+      {/* Refresh arrow */}
+      <motion.path
+        d="M2 4.5L2.5 8.5L6.5 7.5"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
-        duration={0.7}
-        delay={0.4}
-        pauseBeforeReverse={3000}
+        duration={0.35}
+        delay={0.75}
       />
 
-      {/* Right bar */}
+      {/* Currency symbol */}
       <AnimatedPath
-        d="M19 12V8C19 7.53501 19 7.30252 18.9489 7.11177C18.8102 6.59413 18.4059 6.18981 17.8882 6.05111C17.6975 6 17.465 6 17 6C16.535 6 16.3025 6 16.1118 6.05111C15.5941 6.18981 15.1898 6.59413 15.0511 7.11177C15 7.30252 15 7.53501 15 8V12C15 12.465 15 12.6975 15.0511 12.8882C15.1898 13.4059 15.5941 13.8102 16.1118 13.9489C16.3025 14 16.535 14 17 14C17.465 14 17.6975 14 17.8882 13.9489C18.4059 13.8102 18.8102 13.4059 18.9489 12.8882C19 12.6975 19 12.465 19 12Z"
+        d="M14.7257 10.0603C14.6268 9.29765 13.7528 8.06543 12.1812 8.0654C10.3551 8.06537 9.58672 9.07867 9.43081 9.58532C9.18758 10.263 9.23622 11.6563 11.3766 11.8082C14.0522 11.9982 15.124 12.3146 14.9877 13.9552C14.8513 15.5957 13.3599 15.9502 12.1812 15.9121C11.0024 15.8742 9.07398 15.3317 8.99915 13.8725M11.9941 6.49921V8.06902M11.9941 15.9023V17.4992"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
-        strokeLinejoin="round"
-        duration={0.7}
-        delay={0.7}
-        pauseBeforeReverse={3000}
-      />
-
-      {/* Left connectors */}
-      <AnimatedPath
-        d="M9 9V5"
-        stroke="currentColor"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        duration={0.3}
-        delay={1.1}
-        pauseBeforeReverse={3000}
-      />
-
-      <AnimatedPath
-        d="M9 15V17"
-        stroke="currentColor"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        duration={0.3}
-        delay={1.25}
-        pauseBeforeReverse={3000}
-      />
-
-      {/* Right connectors */}
-      <AnimatedPath
-        d="M17 6V3"
-        stroke="currentColor"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        duration={0.3}
-        delay={1.4}
-        pauseBeforeReverse={3000}
-      />
-
-      <AnimatedPath
-        d="M17 14V17"
-        stroke="currentColor"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        duration={0.3}
-        delay={1.55}
+        duration={0.8}
+        delay={1}
         pauseBeforeReverse={3000}
       />
     </svg>
   );
 }
 
+export function AnimatedBreakingNewsIcon({ className }) {
+  return (
+    <svg
+      className={className}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Center */}
+      <motion.path
+        d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
+        stroke="currentColor"
+        strokeWidth={1.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        duration={0.5}
+        pauseBeforeReverse={3000}
+      />
+
+      {/* Inner waves */}
+      <motion.g
+        animate={{
+          scale: [1, 1.08, 1],
+          opacity: [0.7, 1, 0.7],
+        }}
+        transition={{
+          duration: 1.8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        style={{ transformOrigin: "12px 12px" }}
+      >
+        <path
+          d="M7.5 8C6.5 9 6 10.5 6 12C6 13.5 6.5 15 7.5 16"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M16.5 16C17.5 15 18 13.5 18 12C18 10.5 17.5 9 16.5 8"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </motion.g>
+
+      {/* Outer waves */}
+      <motion.g
+        animate={{
+          scale: [1, 1.12, 1],
+          opacity: [0.45, 1, 0.45],
+        }}
+        transition={{
+          duration: 1.8,
+          repeat: Infinity,
+          repeatDelay: 0.1,
+          ease: "easeInOut",
+        }}
+        style={{ transformOrigin: "12px 12px" }}
+      >
+        <path
+          d="M4.5 6C3 7.5 2 9.5 2 12C2 14.5 3 16.5 4.5 18"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M19.5 18C21 16.5 22 14.5 22 12C22 9.5 21 7.5 19.5 6"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </motion.g>
+    </svg>
+  );
+}
 
 export function ChartIcon({ className }) {
   return (
@@ -902,6 +1032,80 @@ export function BitcoinIcon({ className }) {
   );
 }
 
+// export function FinanceIcon({ className }) {
+//   return (
+//     <svg
+//       className={className}
+//       width="24"
+//       height="24"
+//       viewBox="0 0 24 24"
+//       fill="none"
+//       xmlns="http://www.w3.org/2000/svg"
+//     >
+//       {/* Axes */}
+//       <path
+//         d="M3 3V13C3 16.7712 3 18.6569 4.17157 19.8284C5.34315 21 7.22876 21 11 21H21"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+
+//       {/* Left bar */}
+//       <path
+//         d="M11 13V11C11 10.535 11 10.3025 10.9489 10.1118C10.8102 9.59413 10.4059 9.18981 9.88823 9.05111C9.69748 9 9.46499 9 9 9C8.53501 9 8.30252 9 8.11177 9.05111C7.59413 9.18981 7.18981 9.59413 7.05111 10.1118C7 10.3025 7 10.535 7 11V13C7 13.465 7 13.6975 7.05111 13.8882C7.18981 14.4059 7.59413 14.8102 8.11177 14.9489C8.30252 15 8.53501 15 9 15C9.46499 15 9.69748 15 9.88823 14.9489C10.4059 14.8102 10.8102 14.4059 10.9489 13.8882C11 13.6975 11 13.465 11 13Z"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+
+//       {/* Right bar */}
+//       <path
+//         d="M19 12V8C19 7.53501 19 7.30252 18.9489 7.11177C18.8102 6.59413 18.4059 6.18981 17.8882 6.05111C17.6975 6 17.465 6 17 6C16.535 6 16.3025 6 16.1118 6.05111C15.5941 6.18981 15.1898 6.59413 15.0511 7.11177C15 7.30252 15 7.53501 15 8V12C15 12.465 15 12.6975 15.0511 12.8882C15.1898 13.4059 15.5941 13.8102 16.1118 13.9489C16.3025 14 16.535 14 17 14C17.465 14 17.6975 14 17.8882 13.9489C18.4059 13.8102 18.8102 13.4059 18.9489 12.8882C19 12.6975 19 12.465 19 12Z"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+
+//       {/* Left connectors */}
+//       <path
+//         d="M9 9V5"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+
+//       <path
+//         d="M9 15V17"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+
+//       {/* Right connectors */}
+//       <path
+//         d="M17 6V3"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+
+//       <path
+//         d="M17 14V17"
+//         stroke="currentColor"
+//         strokeWidth={1.5}
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+//     </svg>
+//   );
+// }
+
 export function FinanceIcon({ className }) {
   return (
     <svg
@@ -912,66 +1116,124 @@ export function FinanceIcon({ className }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Axes */}
+      {/* Outer refresh circle */}
       <path
-        d="M3 3V13C3 16.7712 3 18.6569 4.17157 19.8284C5.34315 21 7.22876 21 11 21H21"
-        stroke="currentColor"
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-
-      />
-
-      {/* Left bar */}
-      <path
-        d="M11 13V11C11 10.535 11 10.3025 10.9489 10.1118C10.8102 9.59413 10.4059 9.18981 9.88823 9.05111C9.69748 9 9.46499 9 9 9C8.53501 9 8.30252 9 8.11177 9.05111C7.59413 9.18981 7.18981 9.59413 7.05111 10.1118C7 10.3025 7 10.535 7 11V13C7 13.465 7 13.6975 7.05111 13.8882C7.18981 14.4059 7.59413 14.8102 8.11177 14.9489C8.30252 15 8.53501 15 9 15C9.46499 15 9.69748 15 9.88823 14.9489C10.4059 14.8102 10.8102 14.4059 10.9489 13.8882C11 13.6975 11 13.465 11 13Z"
+        d="M2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C7.89936 2 4.3752 4.46819 2.83209 8"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
-      {/* Right bar */}
+      {/* Refresh arrow */}
       <path
-        d="M19 12V8C19 7.53501 19 7.30252 18.9489 7.11177C18.8102 6.59413 18.4059 6.18981 17.8882 6.05111C17.6975 6 17.465 6 17 6C16.535 6 16.3025 6 16.1118 6.05111C15.5941 6.18981 15.1898 6.59413 15.0511 7.11177C15 7.30252 15 7.53501 15 8V12C15 12.465 15 12.6975 15.0511 12.8882C15.1898 13.4059 15.5941 13.8102 16.1118 13.9489C16.3025 14 16.535 14 17 14C17.465 14 17.6975 14 17.8882 13.9489C18.4059 13.8102 18.8102 13.4059 18.9489 12.8882C19 12.6975 19 12.465 19 12Z"
+        d="M2 4.5L2.5 8.5L6.5 7.5"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
-      {/* Left connectors */}
+      {/* Currency symbol */}
       <path
-        d="M9 9V5"
+        d="M14.7257 10.0603C14.6268 9.29765 13.7528 8.06543 12.1812 8.0654C10.3551 8.06537 9.58672 9.07867 9.43081 9.58532C9.18758 10.263 9.23622 11.6563 11.3766 11.8082C14.0522 11.9982 15.124 12.3146 14.9877 13.9552C14.8513 15.5957 13.3599 15.9502 12.1812 15.9121C11.0024 15.8742 9.07398 15.3317 8.99915 13.8725M11.9941 6.49921V8.06902M11.9941 15.9023V17.4992"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function BlockChainIcon({ className }) {
+  return (
+    <svg
+      className={className}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Package */}
+      <path
+        d="M12 22C12.2443 22 12.4714 21.8869 12.9256 21.6608L16.5766 19.8432C18.1922 19.039 19 18.6368 19 18V10M12 22C11.7557 22 11.5286 21.8869 11.0744 21.6608L7.42337 19.8432C5.80779 19.039 5 18.6368 5 18V10M12 22V14M19 10C19 9.36317 18.1922 8.96103 16.5766 8.15675L12.9256 6.33919C12.4714 6.11306 12.2443 6 12 6C11.7557 6 11.5286 6.11306 11.0744 6.33919L7.42337 8.15675C5.80779 8.96103 5 9.36317 5 10M19 10C19 10.6368 18.1922 11.039 16.5766 11.8432L12.9256 13.6608C12.4714 13.8869 12.2443 14 12 14M5 10C5 10.6368 5.80779 11.039 7.42337 11.8432L11.0744 13.6608C11.5286 13.8869 11.7557 14 12 14"
+        stroke="currentColor"
+        strokeWidth={1.5}
         strokeLinejoin="round"
+        // duration={1.2}
+        // pauseBeforeReverse={3000}
       />
 
+      {/* Top connection */}
       <path
-        d="M9 15V17"
+        d="M12 2V6"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
+        // duration={0.3}
+        // delay={0.8}
+        // pauseBeforeReverse={3000}
       />
 
-      {/* Right connectors */}
+      {/* Left connection */}
       <path
-        d="M17 6V3"
+        d="M2 21L5 18.5"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
+        // duration={0.3}
+        // delay={1}
+        // pauseBeforeReverse={3000}
       />
 
+      {/* Right connection */}
       <path
-        d="M17 14V17"
+        d="M22 21L19 18.5"
         stroke="currentColor"
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"
+        // duration={0.3}
+        // delay={1.2}
+        // pauseBeforeReverse={3000}
+      />
+    </svg>
+  );
+}
+
+export function AiIcon({ className }) {
+  return (
+    <svg
+      className={className}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16 21.9995V21.4995C16 20.395 16.9321 19.5 17.9223 19.0106C18.8846 18.5349 19.6943 17.7507 19.7965 16.8308L20 14.9995L22 13.9995L19.5 10.2495C19.5 5.94601 16.2049 2.41209 12 2.03317M6.5 16.9957V21.9995M9 18.189C8.09362 17.9326 7.25065 17.5253 6.5 16.9957C5.46656 16.2668 4.60808 15.3063 4 14.1898"
+        stroke="currentcolor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M8 4H6C5.05719 4 4.58579 4 4.29289 4.29289C4 4.58579 4 5.05719 4 6V8C4 8.94281 4 9.41421 4.29289 9.70711C4.58579 10 5.05719 10 6 10H8C8.94281 10 9.41421 10 9.70711 9.70711C10 9.41421 10 8.94281 10 8V6C10 5.05719 10 4.58579 9.70711 4.29289C9.41421 4 8.94281 4 8 4Z"
+        stroke="currentcolor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M5.5 9.99997V12M8.5 9.99997V12M5.5 1.99997V3.99997M8.5 1.99997V3.99997M4 5.49997H2M4 8.49997H2M12 5.49997H10M12 8.49997H10"
+        stroke="currentcolor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       />
     </svg>
   );

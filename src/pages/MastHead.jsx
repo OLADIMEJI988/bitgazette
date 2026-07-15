@@ -1,13 +1,23 @@
 import React from "react";
+import facebook from "../assets/Facebook.svg";
+import twitter from "../assets/Twitter.svg";
+import linkedin from "../assets/Linkedin.svg";
+import instagram from "../assets/Instagram.svg";
 
 const leadership = [
   {
     name: "Jerry Musa",
     role: "Chief Executive Officer (CEO) & Chief Content Officer (CCO)",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/jeremiah-musa?utm_source=share_via&utm_content=profile&ut m_medium=member_android ",
+    },
   },
   {
     name: "Mark Frost",
     role: "Co-Founder",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/mark-frost-00a1b4321?utm_source=share_via&utm_content=pro file&utm_medium=member_android ",
+    },
   },
 ];
 
@@ -15,10 +25,19 @@ const editorial = [
   {
     name: "Olivia",
     role: "Managing Editor",
+    socials: {
+      x: "https://x.com/...",
+      linkedin: "https://linkedin.com/in/...",
+      instagram: "https://instagram.com/...",
+      facebook: "https://facebook.com/...",
+    },
   },
   {
     name: "Ayuba Haruna",
     role: "Editor",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/ayuba-haruna?utm_source=share_via&utm_content=profile&utm _medium=member_android ",
+    },
   },
 ];
 
@@ -26,26 +45,44 @@ const writers = [
   {
     name: "Moses Edozie",
     role: "Writer & Reporter",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/moses-edozie-b11a6b279?utm_source=share_via&utm_content =profile&utm_medium=member_android ",
+    },
   },
   {
     name: "Elizabeth",
     role: "Writer & Reporter",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/oyebayo-elizabeth-49b0ab185?utm_source=share_via&utm_con tent=profile&utm_medium=member_ios ",
+    },
   },
   {
     name: "Joseph Samuel",
     role: "Writer & Reporter",
+    socials: {
+      facebook: "https://www.facebook.com/share/1Bj6b4nX7n/ ",
+    },
   },
   {
     name: "Emmanuel Musa",
     role: "Writer & Reporter",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/manuelceebam?utm_source=share_via&utm_content=profile&ut m_medium=member_android ",
+    },
   },
   {
     name: "Davidson",
     role: "Writer & Reporter",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/davidre026?utm_source=share_via&utm_content=profile&utm_ medium=member_android ",
+    },
   },
   {
     name: "Victor Ray",
     role: "Writer & Reporter",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/victor-adinoyi-ohagwasi-926908200?utm_source=share_via&ut m_content=profile&utm_medium=member_android ",
+    },
   },
 ];
 
@@ -71,32 +108,69 @@ function TeamSection({ title, members }) {
             </p>
 
             {/* socials */}
-            {/*
+            {member.socials && (
+              <div className="mt-8 flex items-center gap-4">
+                {member.socials.x && (
+                  <a
+                    href={member.socials.x}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 transition hover:bg-gray-200"
+                    aria-label={`${member.name} on X`}
+                  >
+                    <img
+                      src={twitter}
+                      alt="X"
+                      className="h-6 w-6 lg:h-5 lg:w-5"
+                    />
+                  </a>
+                )}
 
-            <div className="flex items-center gap-4 mt-8">
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition"
-              >
-                <Mail size={18} />
-              </a>
+                {member.socials.linkedin && (
+                  <a
+                    href={member.socials.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 transition hover:bg-gray-200"
+                    aria-label={`${member.name} on LinkedIn`}
+                  >
+                    <img
+                      src={linkedin}
+                      alt="LinkedIn"
+                      className="h-6 w-6 lg:h-5 lg:w-5"
+                    />
+                  </a>
+                )}
 
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition"
-              >
-                <Twitter size={18} />
-              </a>
+                {member.socials.instagram && (
+                  <a
+                    href={member.socials.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 transition hover:bg-gray-200"
+                    aria-label={`${member.name} on Instagram`}
+                  >
+                    <img
+                      src={instagram}
+                      alt="Instagram"
+                      className="h-6 w-6 lg:h-5 lg:w-5"
+                    />
+                  </a>
+                )}
 
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition"
-              >
-                <Linkedin size={18} />
-              </a>
-            </div>
-
-            */}
+                {member.socials.facebook && (
+                  <a
+                    href={member.socials.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 transition hover:bg-gray-200"
+                    aria-label={`${member.name} on Facebook`}
+                  >
+                    <img src={facebook} alt="Facebook" className="h-6 w-6" />
+                  </a>
+                )}
+              </div>
+            )}
           </article>
         ))}
       </div>

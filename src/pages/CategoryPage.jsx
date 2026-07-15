@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { useFetch } from '../hooks/useFetch';
-import { getPostsByCategory } from '../services/posts';
-import ArticleList from '../components/ArticleList';
-import Pagination from '../components/ui/Pagination';
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useFetch } from "../hooks/useFetch";
+import { getPostsByCategory } from "../services/posts";
+import ArticleList from "../components/ArticleList";
+import Pagination from "../components/ui/Pagination";
+import { getIcon } from "../components/ui/CategoryIcons";
 
 export default function CategoryPage() {
   const { slug } = useParams();
@@ -11,13 +12,14 @@ export default function CategoryPage() {
 
   const { data, loading, error, refetch } = useFetch(
     () => getPostsByCategory(slug, { page, perPage: 10 }),
-    [slug, page]
+    [slug, page],
   );
 
   return (
     <div className="mx-auto max-w-content px-4 py-8 font-['news-reader'] tracking-wide">
-      <h1 className="mb-6 text-2xl font-medium capitalize text-ink">
-        {slug.replace(/-/g, ' ')}
+      <h1 className="mb-6 flex items-center gap-3 text-2xl font-medium capitalize text-ink">
+        {getIcon(slug, "category", "w-8 h-8")}
+        {slug.replace(/-/g, " ")}
       </h1>
       <div className="mx-auto max-w-3xl">
         <ArticleList
@@ -31,7 +33,7 @@ export default function CategoryPage() {
           totalPages={data?.pagination?.totalPages}
           onPageChange={(p) => {
             setPage(p);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         />
       </div>

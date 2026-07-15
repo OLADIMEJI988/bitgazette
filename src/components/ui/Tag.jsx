@@ -9,8 +9,11 @@ import {
   TrendingIcon,
   OpinionIcon,
   PressReleaseIcon,
+  BlockChainIcon,
   BitcoinIcon,
   FinanceIcon,
+  AnimatedBreakingNewsIcon,
+  AiIcon,
 } from "./AnimatedIcons";
 
 const VARIANTS = {
@@ -27,13 +30,13 @@ const VARIANTS = {
 };
 
 const ICONS = {
-  breaking: <TrendingIcon className="w-[17px] h-[17px]" />,
+  breaking: <AnimatedBreakingNewsIcon className="w-[17px] h-[17px]" />,
   sponsored: <MegaphoneIcon className="w-[17px] h-[17px]" />,
   tech: <TechIcon className="w-[17px] h-[17px]" />,
   finance: <FinanceIcon className="w-[17px] h-[17px]" />,
-  crypto: <BitcoinIcon className="w-[17px] h-[17px]" />,
+  crypto: <BlockChainIcon className="w-[17px] h-[17px]" />,
   bitcoin: <BitcoinIcon className="w-[17px] h-[17px]" />,
-  ai: <TechIcon className="w-[17px] h-[17px]" />, // or make a dedicated AI icon
+  ai: <AiIcon className="w-[17px] h-[17px]" />,
   opinion: <OpinionIcon className="w-[17px] h-[17px]" />,
   analysis: <ChartIcon className="w-[17px] h-[17px]" />,
   "expert analysis": <ChartIcon className="w-[17px] h-[17px]" />,

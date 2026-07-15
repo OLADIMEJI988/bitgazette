@@ -49,7 +49,7 @@ export default function FeaturedArticle({ post, loading }) {
           </Tag>
         ))}
         <Link to={post.link}>
-          <h1 className="font-['news-reader'] tracking-[0.06px] text-[24px] mt-3 font-medium leading-[30px] text-ink group-hover:text-brand sm:text-[24px]">
+          <h1 className="font-['news-reader'] tracking-[0.06px] text-[24px] mt-3 font-medium leading-[30px] text-ink group-hover:text-brand">
             {post.title}
           </h1>
         </Link>
