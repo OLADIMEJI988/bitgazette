@@ -2,6 +2,8 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./components/Layout";
+import TermsOfService from "./pages/TermsofService";
+import Advertise from "./pages/Advertise";
 
 const Home = lazy(() => import("./pages/Home"));
 const News = lazy(() => import("./pages/News"));
@@ -49,8 +51,10 @@ export default function App() {
             <Route path="/masthead" element={<MastHead />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/advertise" element={<Advertise />} />
             <Route path="/ethics" element={<Ethics />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<TermsOfService />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<NotFound />} />
           </Route>

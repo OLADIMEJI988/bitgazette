@@ -62,7 +62,7 @@ const SOCIALS = [
 export default function Footer() {
   return (
     <footer className="border-t border-surface-border bg-surface">
-      <div className="mx-auto max-w-content px-4 py-9">
+      <div className="mx-auto max-w-content px-4 lg:px-6 py-9">
         <Link to="/" className="inline-block" aria-label="The Bit Gazette home">
           <img src={logo} alt="The Bit Gazette" className="h-[78px] w-auto" />
         </Link>
