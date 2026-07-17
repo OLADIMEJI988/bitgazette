@@ -2,8 +2,6 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Layout from "./components/Layout";
-import TermsOfService from "./pages/TermsofService";
-import Advertise from "./pages/Advertise";
 
 const Home = lazy(() => import("./pages/Home"));
 const News = lazy(() => import("./pages/News"));
@@ -16,8 +14,10 @@ const About = lazy(() => import("./pages/About"));
 const MastHead = lazy(() => import("./pages/MastHead"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Accessibility = lazy(() => import("./pages/Accessibility"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const Ethics = lazy(() => import("./pages/Ethics"));
 const Privacy = lazy(() => import("./pages/Privacy"));
+const Advertise = lazy(() => import("./pages/Advertise"));
 const Login = lazy(() => import("./pages/Login"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
