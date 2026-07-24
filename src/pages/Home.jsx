@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { History } from "lucide-react";
 import { useFetch } from "../hooks/useFetch";
 import { motion } from "framer-motion";
@@ -18,18 +19,32 @@ import ArticleList from "../components/ArticleList";
 import LeftSidebar from "../components/LeftSidebar";
 import RightSidebar from "../components/RightSidebar";
 import CategorySection from "../components/CategorySection";
-import { AnimatedOpinionIcon, AnimatedPressReleaseIcon, AnimatedBitcoinIcon, AnimatedFinanceIcon } from "../components/ui/AnimatedIcons";
+import {
+  AnimatedOpinionIcon,
+  AnimatedPressReleaseIcon,
+  AnimatedBitcoinIcon,
+  AnimatedFinanceIcon,
+} from "../components/ui/AnimatedIcons";
+import Pagination from "../components/ui/Pagination";
 
 const LOWER_SECTIONS = [
   { title: "Opinion", slug: "opinion", Icon: AnimatedOpinionIcon },
-  { title: "Press Release", slug: "press-release", Icon: AnimatedPressReleaseIcon },
+  {
+    title: "Press Release",
+    slug: "press-release",
+    Icon: AnimatedPressReleaseIcon,
+  },
   { title: "Bitcoin", slug: "bitcoin", Icon: AnimatedBitcoinIcon },
   // { title: "Finance", slug: "finance" },
 ];
 
 export default function Home() {
   const featured = useFetch(() => getFeaturedPosts({ perPage: 1 }), []);
-  const latest = useFetch(() => getLatestPosts({ perPage: 9 }), []);
+  const [latestPage, setLatestPage] = useState(1);
+  const latest = useFetch(
+    () => getLatestPosts({ page: latestPage, perPage: 9 }),
+    [latestPage],
+  );
   const expert = useFetch(() => getExpertAnalysis({ perPage: 3 }), []);
   const sponsored = useFetch(() => getSponsoredPosts({ perPage: 2 }), []);
   const finance = useFetch(() => getFinancePosts({ perPage: 3 }), []);
@@ -115,6 +130,22 @@ export default function Home() {
               loading={latest.loading}
               error={latest.error}
               onRetry={latest.refetch}
+            />
+
+            <Pagination
+              page={latestPage}
+              totalPages={latest.data?.pagination?.totalPages}
+              onPageChange={(page) => {
+                setLatestPage(page);
+
+                // Scroll back to the Latest Stories section
+                document
+                  .querySelector('[aria-label="Latest stories"]')
+                  ?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+              }}
             />
           </section>
         </div>

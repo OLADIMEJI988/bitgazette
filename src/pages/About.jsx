@@ -12,7 +12,7 @@ const principles = [
   },
   {
     title: "Responsible Headlines",
-    text: "We hold our headlines to the same standard as our reporting. They should inform readers accurately—not exaggerate or mislead them.",
+    text: "We hold our headlines to the same standard as our reporting. They should inform readers accurately, not exaggerate or mislead them.",
   },
   {
     title: "Transparency",
@@ -49,8 +49,8 @@ const stats = [
     label: "Global Coverage",
   },
   {
-    value: "Global",
-    label: "Reader Focus",
+    value: "Global Reach",
+    label: "Majority of traffic from the U.S",
   },
 ];
 
@@ -91,7 +91,7 @@ export default function About() {
             </span>
 
             <h2 className="mt-4 text-3xl font-['news-reader'] font-medium text-ink">
-              A global newsroom built on local talent.
+              A global newsroom built on Nigerian talent.
             </h2>
 
             <p className="mt-6 leading-8 text-ink-soft">
@@ -105,10 +105,10 @@ export default function About() {
             </p>
 
             <p className="mt-6 leading-8 text-ink-soft">
-              By combining local expertise with a global perspective, we're
-              building a publication that delivers credible reporting for
-              readers everywhere while creating opportunities for journalists
-              whose work deserves an international audience.
+              This combination of Nigerian expertise and global perspective allows
+              us to deliver credible reporting for readers everywhere while
+              creating opportunities for journalists whose work deserves an
+              international audience.
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export default function About() {
           </h2>
 
           <p className="mt-5 leading-8 text-ink-soft">
-            Accuracy isn't just a goal—it's the foundation of our newsroom.
+            Accuracy isn't just a goal, it's the foundation of our newsroom.
             Every article follows clear editorial standards designed to ensure
             our reporting is factual, transparent, and accountable.
           </p>
@@ -183,7 +183,9 @@ export default function About() {
             >
               <div className="mb-6 h-1.5 w-12 rounded-full bg-primary" />
 
-              <h3 className="text-xl font-medium text-ink font-['news-reader']">{item.title}</h3>
+              <h3 className="text-xl font-medium text-ink font-['news-reader']">
+                {item.title}
+              </h3>
 
               <p className="mt-4 flex-1 leading-8 text-ink-soft">{item.text}</p>
             </div>
@@ -206,7 +208,7 @@ export default function About() {
             From breaking developments in crypto and AI to the financial and
             regulatory stories shaping global markets, The Bit Gazette delivers
             reporting grounded in verification, context, and editorial
-            integrity—helping readers understand not just what's happening, but
+            integrity, helping readers understand not just what's happening, but
             why it matters.
           </p>
 

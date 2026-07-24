@@ -42,14 +42,14 @@ export default function NewsCard({ post }) {
             {updatedLabel(post.date)}
           </span>
 
-          <span aria-hidden="true" className="text-[#7d7f91]">
+          {/* <span aria-hidden="true" className="text-[#7d7f91]">
             •
           </span>
 
           <span className="inline-flex items-center gap-1">
             <MessageSquare size={12} aria-hidden="true" />
             {post.commentCount} comment{post.commentCount === 1 ? "" : "s"}
-          </span>
+          </span> */}
         </div>
       </div>
     </article>

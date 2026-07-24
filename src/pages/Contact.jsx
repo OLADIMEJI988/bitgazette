@@ -47,10 +47,10 @@ export default function Contact() {
                 <Phone size={20} />
 
                 <a
-                  href="tel:+971507830443"
+                  href="tel:+971523814881"
                   className="text-base md:text-lg hover:text-[#FF2C32] transition-colors"
                 >
-                  +971 50 783 0443
+                  +971 52 381 4881
                 </a>
               </div>
             </article>

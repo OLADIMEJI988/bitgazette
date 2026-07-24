@@ -1,29 +1,14 @@
-import { useState, useMemo } from "react";
 import { useFetch } from "../hooks/useFetch";
-import {
-  getPopularPosts,
-  getLatestPosts,
-  getTrendingPosts,
-} from "../services/posts";
-import SmallNewsCard from "./SmallNewsCard";
+import { getPopularPosts, getTrendingPosts } from "../services/posts";
 import SidebarWidget from "./SidebarWidget";
-import { AnimatedTrendingIcon } from "./ui/AnimatedIcons";
-import { ListSkeleton, SmallNewsCardSkeleton } from "./ui/Loaders";
-import { EmptyState, ErrorState } from "./ui/StateMessage";
-
-const TABS = ["Popular", "Comments", "Latest"];
+import { AnimatedTrendingIcon, AnimatedBreakingNewsIcon } from "./ui/AnimatedIcons";
 
 export default function LeftSidebar() {
-  const [activeTab, setActiveTab] = useState("Popular");
-
-  const fetcher = useMemo(() => {
-    if (activeTab === "Latest") return () => getLatestPosts({ perPage: 3 });
-    // "Popular" and "Comments" both rank by engagement; comment_count drives both.
-    return () => getPopularPosts({ perPage: 3 });
-  }, [activeTab]);
-
-  const { data, loading, error, refetch } = useFetch(fetcher, [activeTab]);
-  const posts = activeTab === "Latest" ? data?.posts : data;
+  const {
+    data: popular,
+    loading: popularLoading,
+    error: popularError,
+  } = useFetch(() => getPopularPosts({ perPage: 3 }), []);
 
   const {
     data: trending,
@@ -36,46 +21,15 @@ export default function LeftSidebar() {
       className="flex h-full w-full flex-col space-y-6"
       aria-label="Sidebar"
     >
-      <section className="rounded-[8px] lg:border lg:border-surface-border lg:bg-surface mt-5 lg:mt-0 lg:py-5 lg:px-5">
-        <div
-          className="mb-4 flex gap-1 border-b border-surface-border"
-          role="tablist"
-        >
-          {TABS.map((tab) => (
-            <button
-              key={tab}
-              role="tab"
-              type="button"
-              aria-selected={activeTab === tab}
-              onClick={() => setActiveTab(tab)}
-              className={`-mb-px rounded-t border-b-2 px-3 py-2 font-['plus_jakarta_sans'] tracking-[0.06px] text-[16px] lg:text-sm font-medium transition-colors ${
-                activeTab === tab
-                  ? "border-brand text-brand"
-                  : "border-transparent text-ink-muted hover:text-ink"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-
-        <div className="thin-scroll space-y-5 overflow-y-auto lg:pr-1">
-          {loading && (
-            <ListSkeleton count={3} Component={SmallNewsCardSkeleton} />
-          )}
-          {!loading && error && (
-            <ErrorState message="Couldn't load stories." onRetry={refetch} />
-          )}
-          {!loading && !error && (!posts || posts.length === 0) && (
-            <EmptyState message="No stories yet." />
-          )}
-          {!loading &&
-            !error &&
-            (Array.isArray(posts) ? posts : []).map((post) => (
-              <SmallNewsCard key={post.id} post={post} />
-            ))}
-        </div>
-      </section>
+      <SidebarWidget
+        title="Breaking News"
+        Icon={AnimatedBreakingNewsIcon}
+        to="/category/breaking-news"
+        posts={popular}
+        loading={popularLoading}
+        error={popularError}
+        layout="stacked"
+      />
 
       <div className="lg:sticky lg:top-20 lg:max-h-[calc(100vh-1px)] lg:overflow-hidden">
         <SidebarWidget
